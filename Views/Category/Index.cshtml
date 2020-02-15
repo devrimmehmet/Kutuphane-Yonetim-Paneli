@@ -20,7 +20,7 @@
     <td>@ktg.ID</td>
     <td>@ktg.AD</td>
     <td>@Html.ActionLink("Sil", "KategoriSil", new { id = ktg.ID }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek İstiyor Musunuz ?')" }) </td>
-    @*<td><a href="/Category/KategoriSil/@ktg.ID" class="btn btn-danger">Sil</a></td>*@
+    @*<td><a href="/Category/KategoriSil/@ktg.ID" class="btn btn-danger">Sil</a></td>  ESKİ USÜL hrefle yapma  *@
     <td><a href="/Category/KategoriGetir/@ktg.ID" class="btn btn-success">Güncelle</a></td>
 </tr>
     }

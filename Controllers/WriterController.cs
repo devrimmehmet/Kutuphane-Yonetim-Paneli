@@ -35,6 +35,19 @@ namespace Devrekani_Sehitler_Kutuphanesi.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
+        public ActionResult YazarGetir(int id)
+        {
+            var yzr = db.TBL_YAZAR.Find(id);
+            return View("YazarGetir", yzr);
+        }
+        public ActionResult YazarGuncelle(TBL_YAZAR p)
+        {
+            var yzr = db.TBL_YAZAR.Find(p.ID);
+            yzr.AD = p.AD;
+            yzr.SOYAD = p.SOYAD;
+            yzr.DETAY = p.DETAY;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

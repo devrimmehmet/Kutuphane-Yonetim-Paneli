@@ -252,6 +252,7 @@
     <Content Include="Views\Category\KategoriGetir.cshtml" />
     <Content Include="Views\Writer\Index.cshtml" />
     <Content Include="Views\Writer\YazarEkle.cshtml" />
+    <Content Include="Views\Writer\YazarGetir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
