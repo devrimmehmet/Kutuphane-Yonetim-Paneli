@@ -1,14 +1,28 @@
-﻿
+﻿@using Devrekani_Sehitler_Kutuphanesi.Models.Entity
+@model List<TBL_KATEGORI>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
 
-<h2> Bootsrap Dersleri</h2>
-
-This side navigation is of full height (100%) and always shown.
-
-Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-
-Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+<h2> Kategoriler</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>KATEGORI ID</th>
+        <th>KATEGORI ADI</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    @foreach (var ktg in Model)
+    {  
+<tr>
+    <td>@ktg.ID</td>
+    <td>@ktg.AD</td>
+    <td>@Html.ActionLink("Sil", "KategoriSil", new { id = ktg.ID }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek İstiyor Musunuz ?')" }) </td>
+    @*<td><a href="/Category/KategoriSil/@ktg.ID" class="btn btn-danger">Sil</a></td>*@
+    <td><a href="/Category/KategoriGetir/@ktg.ID" class="btn btn-success">Güncelle</a></td>
+</tr>
+    }
+</table>
+<a href="/Category/KategoriEkle" class="btn btn-primary">Yeni Kategori Ekle</a>
