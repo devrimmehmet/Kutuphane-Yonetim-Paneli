@@ -10,11 +10,24 @@ namespace Devrekani_Sehitler_Kutuphanesi.Controllers
     {
         // GET: Writer
         DB_Kutuphane_Entities db = new DB_Kutuphane_Entities();
-        public ActionResult Index()
+
+        public ActionResult Index(string p)
         {
-            var degerler = db.TBL_YAZAR.ToList();
-            return View(degerler);
+            var yazarlar = from k in db.TBL_YAZAR select k;
+            if (!string.IsNullOrEmpty(p))
+            {
+                yazarlar = yazarlar.Where(x => x.AD.Contains(p));
+            }
+            //var kitaplar = db.TBL_KITAP.ToList();
+            return View(yazarlar.ToList());
         }
+
+
+        //public ActionResult Index()
+        //{
+        //    var degerler = db.TBL_YAZAR.ToList();
+        //    return View(degerler);
+        //}
         [HttpGet]
         public ActionResult YazarEkle()
         {

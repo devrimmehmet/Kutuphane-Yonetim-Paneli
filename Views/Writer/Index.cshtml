@@ -6,7 +6,15 @@
 }
 
 <h2>Yazarlar</h2>
-
+@using (Html.BeginForm("Index", "Writer", FormMethod.Get))
+{
+    <div style="margin-bottom:15px; margin-top:15px;">
+        <b>Aranacak Yazar Adını Giriniz:&nbsp;</b>
+        @Html.TextBox("p")
+        <input type="submit" value="Ara" />
+        @*<input type="text" class="form-control" placeholder="Kitap Ara..."  />*@
+    </div>
+}
 <table class="table table-bordered">
     <tr>
         <th>ID</th>
@@ -18,16 +26,17 @@
     </tr>
     @foreach (var y in Model)
     {
-<tr>
-    <td>@y.ID</td>
-    <td>@y.AD</td>
-    <td>@y.SOYAD</td>
-    <td>@y.DETAY</td>
-    <td>@Html.ActionLink("Sil", "YazarSil", new { id = y.ID }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek İstiyor Musunuz ?')"}) </td>
-    <td><a href="/Writer/YazarGetir/@y.ID" class="btn btn-success">Güncelle</a></td>
+        <tr>
+            <td>@y.ID</td>
+            <td>@y.AD</td>
+            <td>@y.SOYAD</td>
+            <td>@y.DETAY</td>
+            <td>@Html.ActionLink("Sil", "YazarSil", new { id = y.ID }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek İstiyor Musunuz ?')" }) </td>
+            <td><a href="/Writer/YazarGetir/@y.ID" class="btn btn-success">Güncelle</a></td>
 
-</tr>
+        </tr>
     }
 
-</table> 
-<a class="btn btn-primary" href="/Writer/YazarEkle/">Yeni Yazar Ekle</a>
+</table>
+@*<a class="btn btn-primary" href="/Writer/YazarEkle/">Yeni Yazar Ekle</a>*@
+<a href="/writer/YazarEkle" class="btn btn-primary">Yeni Yazar Ekle</a>

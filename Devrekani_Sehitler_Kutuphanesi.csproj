@@ -253,10 +253,12 @@
     <Content Include="Views\Writer\Index.cshtml" />
     <Content Include="Views\Writer\YazarEkle.cshtml" />
     <Content Include="Views\Writer\YazarGetir.cshtml" />
+    <Content Include="Views\Book\Index.cshtml" />
+    <Content Include="Views\Book\KitapEkle.cshtml" />
+    <Content Include="Views\Book\KitapGetir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Book\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
