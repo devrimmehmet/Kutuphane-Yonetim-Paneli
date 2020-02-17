@@ -1,4 +1,4 @@
-*.cs linguist-language=ASP
+*.cs linguist-language=.NET
 *.html linguist-language=Html
 *.xml linguist-language=false
 *.js linguist-detectable=false
