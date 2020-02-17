@@ -1,1 +1,52 @@
-* .cs  linguist-language = Csharp
+* .doc   diff = astextplain
+* .DOC 	fark = astextplain
+* .docx 	fark = astextplain
+* .DOCX 	fark = astextplain
+* .dot 	diff = astextplain
+* .DOT 	fark = astextplain
+* .pdf 	fark = astextplain
+* .PDF 	fark = astextplain
+* .rtf 	diff = astextplain
+* .RTF 	fark = astextplain
+
+* .jpg   	ikili
+* .png  	ikili
+* .gif  	ikili
+
+* .cs  metin = otomatik  fark = csharp 
+* .vb  metin = otomatik
+* .resx  metni = otomatik
+* .c  metin = otomatik
+* .cpp  metin = otomatik
+* .cxx  metin = otomatik
+* .h  metin = otomatik
+* .hxx  metni = otomatik
+* .py  metin = otomatik
+* .rb  metin = otomatik
+* .java  metni = otomatik
+* .html  metin = otomatik
+* .htm  metin = otomatik
+* .css  metni = otomatik
+* .scss  metin = otomatik
+* .sass  metni = otomatik
+* .less  metin = otomatik
+* .js  metin = otomatik
+* .lisp  metni = otomatik
+* .clj  metin = otomatik
+* .sql  metni = otomatik
+* .php  metin = otomatik
+* .lua  metin = otomatik
+* .m  metin = otomatik
+* .asm  metni = otomatik
+* .erl  metni = otomatik
+* .fs  metin = otomatik
+* .fsx  metin = otomatik
+* .hs  metni = otomatik
+
+* .csproj  metin = otomatik
+* .vbproj  metin = otomatik
+* .fsproj  metin = otomatik
+* .dbproj  metin = otomatik
+* .sln  metni = otomatik  eol = crlf
+
+* .sh  eol = lf
