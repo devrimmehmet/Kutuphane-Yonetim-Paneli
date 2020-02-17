@@ -1,1 +1,2 @@
 *.* linguist-language=Asp
+*.cs linguist-language=Csharp
