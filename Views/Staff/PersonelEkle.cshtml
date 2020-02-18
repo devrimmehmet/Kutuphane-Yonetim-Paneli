@@ -1,0 +1,19 @@
+﻿@model Devrekani_Sehitler_Kutuphanesi.Models.Entity.TBL_PERSONEL
+
+@{
+    ViewBag.Title = "PersonelEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Personel Ekle</h2>
+<form class="form-group" method="post">
+
+    <div style="margin-top:15px">
+        <label>Personel Adı</label>
+        @Html.TextBoxFor(y => y.PERSONEL, new { @class = "form-control" })
+        @Html.ValidationMessageFor(y => y.PERSONEL,"",new{ @style = "color:red" } )
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-info" id="Btn1">Personel Ekle</button>
+    </div>
+</form>

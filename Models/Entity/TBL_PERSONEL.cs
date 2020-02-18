@@ -11,10 +11,13 @@ namespace Devrekani_Sehitler_Kutuphanesi.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TBL_PERSONEL
     {
         public byte ID { get; set; }
+
+        [Required(ErrorMessage="Personel Adý Boþ Býrakýlamaz")]
         public string PERSONEL { get; set; }
     }
 }

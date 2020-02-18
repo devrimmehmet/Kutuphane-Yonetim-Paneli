@@ -1,0 +1,26 @@
+﻿@model Devrekani_Sehitler_Kutuphanesi.Models.Entity.TBL_PERSONEL
+
+@{
+    ViewBag.Title = "PersonelGetir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Personel Güncelle</h2>
+
+@using (Html.BeginForm("PersonelGuncelle", "Staff", FormMethod.Post))
+{
+    <div style="margin-bottom:15px"></div>
+    <div class="form-group">
+
+        @Html.LabelFor(k => k.ID)
+        @Html.TextBoxFor(k => k.ID, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(k => k.PERSONEL)
+        @Html.TextBoxFor(k => k.PERSONEL, new { @class = "form-control" })
+        @Html.ValidationMessageFor(y => y.PERSONEL, "", new { @style = "color:red" })
+    </div>
+    <div>
+        <button class="btn btn-warning">Güncelle</button>
+
+    </div>
+}
