@@ -11,7 +11,8 @@ namespace Devrekani_Sehitler_Kutuphanesi.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TBL_KITAP
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -26,6 +27,8 @@ namespace Devrekani_Sehitler_Kutuphanesi.Models.Entity
         public string AD { get; set; }
         public Nullable<byte> KATEGORI { get; set; }
         public Nullable<int> YAZAR { get; set; }
+       
+        [StringLength(4, ErrorMessage = "Sadece Yýl Giriniz ( Örnek: 2020 ).")]
         public string BASKIYILI { get; set; }
         public string YAYINEVI { get; set; }
         public string SAYFA { get; set; }

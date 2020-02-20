@@ -33,7 +33,7 @@ namespace Devrekani_Sehitler_Kutuphanesi.Controllers
             return View();
         }
 
-        public ActionResult PersonelSil(int id)
+        public ActionResult UyeSil(int id)
         {
             var person = db.TBL_PERSONEL.Find(id);
             db.TBL_PERSONEL.Remove(person);
