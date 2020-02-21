@@ -34,5 +34,7 @@ namespace Devrekani_Sehitler_Kutuphanesi.Models.Entity
         public virtual DbSet<TBL_PERSONEL> TBL_PERSONEL { get; set; }
         public virtual DbSet<TBL_UYELER> TBL_UYELER { get; set; }
         public virtual DbSet<TBL_YAZAR> TBL_YAZAR { get; set; }
+        public virtual DbSet<TBL_HAKKIMIZDA> TBL_HAKKIMIZDA { get; set; }
+        public virtual DbSet<TBL_ILETISIM> TBL_ILETISIM { get; set; }
     }
 }
