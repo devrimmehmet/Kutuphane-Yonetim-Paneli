@@ -1,0 +1,39 @@
+﻿@model Devrekani_Sehitler_Kutuphanesi.Models.Entity.TBL_HAREKET
+
+@{
+    ViewBag.Title = "OduncVer";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Ödünç Verme İşlemi</h2>
+<form class="form-group" method="post">
+
+    <div style="margin-top:15px">
+        <label>Üye ID</label>
+        @Html.TextBoxFor(k => k.UYE, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px">
+        <label>Kitap ID</label>
+        @Html.TextBoxFor(k => k.KITAP, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px">
+        <label>Personel ID</label>
+        @Html.TextBoxFor(k => k.PERSONEL, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px">
+        <label>Kitap Veriliş Tarihi</label>
+        <input type="text" class="form-control" name="ALISTARIHI" value="@DateTime.Now.ToShortDateString()"  />
+    </div>
+    <div style="margin-top:15px">
+        <label>Kitap İade Tarihi</label>
+        <input type="text" class="form-control" name="IADETARIHI" value="@DateTime.Now.AddDays(14).ToShortDateString()"  />
+    </div>
+
+    <div style="margin-top:15px">
+        <button class="btn btn-group" style="background-color:#4800ff; color:white">Kitabı Ödünç Ver</button>
+    </div>
+</form>
+
+

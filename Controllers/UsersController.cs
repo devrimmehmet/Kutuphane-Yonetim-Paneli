@@ -11,7 +11,7 @@ namespace Devrekani_Sehitler_Kutuphanesi.Controllers
 {
     public class UsersController : Controller
     {
-        DB_Kutuphane_Entities db = new DB_Kutuphane_Entities();
+        DB_Kutuphane_Entities2 db = new DB_Kutuphane_Entities2();
 
 
         public ActionResult Index(int sayfa=1)

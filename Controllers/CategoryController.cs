@@ -9,7 +9,7 @@ namespace Devrekani_Sehitler_Kutuphanesi.Controllers
     public class CategoryController : Controller
     {
         // GET: Category
-        DB_Kutuphane_Entities db = new DB_Kutuphane_Entities();
+        DB_Kutuphane_Entities2 db = new DB_Kutuphane_Entities2();
         public ActionResult Index()
         {
             var degerler = db.TBL_KATEGORI.ToList();

@@ -19,7 +19,7 @@ namespace Devrekani_Sehitler_Kutuphanesi.Models.Entity
         public Nullable<System.DateTime> BASLANGIC { get; set; }
         public Nullable<System.DateTime> BITIS { get; set; }
         public Nullable<decimal> PARA { get; set; }
-        public Nullable<int> HAREKET { get; set; }
+        public Nullable<byte> HAREKET { get; set; }
     
         public virtual TBL_HAREKET TBL_HAREKET { get; set; }
         public virtual TBL_UYELER TBL_UYELER { get; set; }

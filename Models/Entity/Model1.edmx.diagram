@@ -4,25 +4,26 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9cec98f2c9f746bdaa7a7d65908950ae" Name="Diagram1">
-        <EntityTypeShape EntityType="DB_Kutuphane_Model.sysdiagrams" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_Kutuphane_Model.TBL_CEZALAR" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_Kutuphane_Model.TBL_HAREKET" Width="1.5" PointX="6" PointY="2.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_Kutuphane_Model.TBL_KASA" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_Kutuphane_Model.TBL_KATEGORI" Width="1.5" PointX="1.5" PointY="8.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_Kutuphane_Model.TBL_KITAP" Width="1.5" PointX="3.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_Kutuphane_Model.TBL_PERSONEL" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_Kutuphane_Model.TBL_UYELER" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_Kutuphane_Model.TBL_YAZAR" Width="1.5" PointX="1.5" PointY="10.625" IsExpanded="true" />
-        <AssociationConnector Association="DB_Kutuphane_Model.FK_TBL_CEZALAR_TBL_HAREKET" ManuallyRouted="false" />
-        <AssociationConnector Association="DB_Kutuphane_Model.FK_TBL_CEZALAR_TBL_UYELER" ManuallyRouted="false" />
-        <AssociationConnector Association="DB_Kutuphane_Model.FK_TBL_HAREKET_TBL_KITAP" ManuallyRouted="false" />
-        <AssociationConnector Association="DB_Kutuphane_Model.FK_TBL_HAREKET_TBL_KITAP1" ManuallyRouted="false" />
-        <AssociationConnector Association="DB_Kutuphane_Model.FK_TBL_HAREKET_TBL_KITAP2" ManuallyRouted="false" />
-        <AssociationConnector Association="DB_Kutuphane_Model.FK_TBL_HAREKET_TBL_UYELER" ManuallyRouted="false" />
-        <AssociationConnector Association="DB_Kutuphane_Model.FK_TBL_HAREKET_TBL_UYELER1" ManuallyRouted="false" />
-        <AssociationConnector Association="DB_Kutuphane_Model.FK_TBL_KITAP_TBL_KATEGORI" ManuallyRouted="false" />
-        <AssociationConnector Association="DB_Kutuphane_Model.FK_TBL_KITAP_TBL_YAZAR" ManuallyRouted="false" />
+      <Diagram DiagramId="0cdcfd3815964bb0b9246a68f02cf54f" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_Kutuphane_Model2.sysdiagrams" Width="1.5" PointX="5.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_Kutuphane_Model2.TBL_CEZALAR" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_Kutuphane_Model2.TBL_HAREKET" Width="1.5" PointX="6" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_Kutuphane_Model2.TBL_KASA" Width="1.5" PointX="7.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_Kutuphane_Model2.TBL_KATEGORI" Width="1.5" PointX="1.5" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_Kutuphane_Model2.TBL_KITAP" Width="1.5" PointX="3.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_Kutuphane_Model2.TBL_PERSONEL" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_Kutuphane_Model2.TBL_UYELER" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_Kutuphane_Model2.TBL_YAZAR" Width="1.5" PointX="1.5" PointY="10" IsExpanded="true" />
+        <AssociationConnector Association="DB_Kutuphane_Model2.FK_TBL_CEZALAR_TBL_HAREKET" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_Kutuphane_Model2.FK_TBL_CEZALAR_TBL_UYELER" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_Kutuphane_Model2.FK_TBL_HAREKET_TBL_KITAP" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_Kutuphane_Model2.FK_TBL_HAREKET_TBL_KITAP1" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_Kutuphane_Model2.FK_TBL_HAREKET_TBL_KITAP2" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_Kutuphane_Model2.FK_TBL_HAREKET_TBL_PERSONEL" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_Kutuphane_Model2.FK_TBL_HAREKET_TBL_UYELER" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_Kutuphane_Model2.FK_TBL_HAREKET_TBL_UYELER1" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_Kutuphane_Model2.FK_TBL_KITAP_TBL_KATEGORI" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_Kutuphane_Model2.FK_TBL_KITAP_TBL_YAZAR" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

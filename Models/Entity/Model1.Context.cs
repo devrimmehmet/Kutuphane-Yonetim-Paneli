@@ -13,10 +13,10 @@ namespace Devrekani_Sehitler_Kutuphanesi.Models.Entity
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DB_Kutuphane_Entities : DbContext
+    public partial class DB_Kutuphane_Entities2 : DbContext
     {
-        public DB_Kutuphane_Entities()
-            : base("name=DB_Kutuphane_Entities")
+        public DB_Kutuphane_Entities2()
+            : base("name=DB_Kutuphane_Entities2")
         {
         }
     

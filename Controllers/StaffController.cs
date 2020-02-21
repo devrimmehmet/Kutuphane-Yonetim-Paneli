@@ -8,7 +8,7 @@ namespace Devrekani_Sehitler_Kutuphanesi.Controllers
 {
     public class StaffController : Controller
     {
-        DB_Kutuphane_Entities db = new DB_Kutuphane_Entities();
+        DB_Kutuphane_Entities2 db = new DB_Kutuphane_Entities2();
         public ActionResult Index()
         {
             var degerler = db.TBL_PERSONEL.ToList();

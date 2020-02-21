@@ -20,10 +20,10 @@ namespace Devrekani_Sehitler_Kutuphanesi.Models.Entity
             this.TBL_CEZALAR = new HashSet<TBL_CEZALAR>();
         }
     
-        public int ID { get; set; }
+        public byte ID { get; set; }
         public Nullable<int> KITAP { get; set; }
         public Nullable<int> UYE { get; set; }
-        public Nullable<int> PERSONEL { get; set; }
+        public Nullable<byte> PERSONEL { get; set; }
         public Nullable<System.DateTime> ALISTARIHI { get; set; }
         public Nullable<System.DateTime> IADETARIHI { get; set; }
     
@@ -32,6 +32,7 @@ namespace Devrekani_Sehitler_Kutuphanesi.Models.Entity
         public virtual TBL_KITAP TBL_KITAP { get; set; }
         public virtual TBL_KITAP TBL_KITAP1 { get; set; }
         public virtual TBL_KITAP TBL_KITAP2 { get; set; }
+        public virtual TBL_PERSONEL TBL_PERSONEL { get; set; }
         public virtual TBL_UYELER TBL_UYELER { get; set; }
         public virtual TBL_UYELER TBL_UYELER1 { get; set; }
     }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DB_Kutuphane_Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="DB_Kutuphane_Model2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -24,16 +24,16 @@
           <Property Name="BASLANGIC" Type="smalldatetime" />
           <Property Name="BITIS" Type="smalldatetime" />
           <Property Name="PARA" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="HAREKET" Type="int" />
+          <Property Name="HAREKET" Type="tinyint" />
         </EntityType>
         <EntityType Name="TBL_HAREKET">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID" Type="tinyint" Nullable="false" />
           <Property Name="KITAP" Type="int" />
           <Property Name="UYE" Type="int" />
-          <Property Name="PERSONEL" Type="int" />
+          <Property Name="PERSONEL" Type="tinyint" />
           <Property Name="ALISTARIHI" Type="smalldatetime" />
           <Property Name="IADETARIHI" Type="smalldatetime" />
         </EntityType>
@@ -155,6 +155,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_TBL_HAREKET_TBL_PERSONEL">
+          <End Role="TBL_PERSONEL" Type="Self.TBL_PERSONEL" Multiplicity="0..1" />
+          <End Role="TBL_HAREKET" Type="Self.TBL_HAREKET" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_PERSONEL">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TBL_HAREKET">
+              <PropertyRef Name="PERSONEL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_TBL_HAREKET_TBL_UYELER">
           <End Role="TBL_UYELER" Type="Self.TBL_UYELER" Multiplicity="0..1" />
           <End Role="TBL_HAREKET" Type="Self.TBL_HAREKET" Multiplicity="*" />
@@ -203,7 +215,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DB_Kutuphane_ModelStoreContainer">
+        <EntityContainer Name="DB_Kutuphane_Model2StoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_CEZALAR" EntityType="Self.TBL_CEZALAR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_HAREKET" EntityType="Self.TBL_HAREKET" Schema="dbo" store:Type="Tables" />
@@ -233,6 +245,10 @@
             <End Role="TBL_KITAP" EntitySet="TBL_KITAP" />
             <End Role="TBL_HAREKET" EntitySet="TBL_HAREKET" />
           </AssociationSet>
+          <AssociationSet Name="FK_TBL_HAREKET_TBL_PERSONEL" Association="Self.FK_TBL_HAREKET_TBL_PERSONEL">
+            <End Role="TBL_PERSONEL" EntitySet="TBL_PERSONEL" />
+            <End Role="TBL_HAREKET" EntitySet="TBL_HAREKET" />
+          </AssociationSet>
           <AssociationSet Name="FK_TBL_HAREKET_TBL_UYELER" Association="Self.FK_TBL_HAREKET_TBL_UYELER">
             <End Role="TBL_UYELER" EntitySet="TBL_UYELER" />
             <End Role="TBL_HAREKET" EntitySet="TBL_HAREKET" />
@@ -254,7 +270,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="DB_Kutuphane_Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="DB_Kutuphane_Model2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -274,7 +290,7 @@
           <Property Name="BASLANGIC" Type="DateTime" Precision="0" />
           <Property Name="BITIS" Type="DateTime" Precision="0" />
           <Property Name="PARA" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="HAREKET" Type="Int32" />
+          <Property Name="HAREKET" Type="Byte" />
           <NavigationProperty Name="TBL_HAREKET" Relationship="Self.FK_TBL_CEZALAR_TBL_HAREKET" FromRole="TBL_CEZALAR" ToRole="TBL_HAREKET" />
           <NavigationProperty Name="TBL_UYELER" Relationship="Self.FK_TBL_CEZALAR_TBL_UYELER" FromRole="TBL_CEZALAR" ToRole="TBL_UYELER" />
         </EntityType>
@@ -282,16 +298,17 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="Byte" Nullable="false" />
           <Property Name="KITAP" Type="Int32" />
           <Property Name="UYE" Type="Int32" />
-          <Property Name="PERSONEL" Type="Int32" />
+          <Property Name="PERSONEL" Type="Byte" />
           <Property Name="ALISTARIHI" Type="DateTime" Precision="0" />
           <Property Name="IADETARIHI" Type="DateTime" Precision="0" />
           <NavigationProperty Name="TBL_CEZALAR" Relationship="Self.FK_TBL_CEZALAR_TBL_HAREKET" FromRole="TBL_HAREKET" ToRole="TBL_CEZALAR" />
           <NavigationProperty Name="TBL_KITAP" Relationship="Self.FK_TBL_HAREKET_TBL_KITAP" FromRole="TBL_HAREKET" ToRole="TBL_KITAP" />
           <NavigationProperty Name="TBL_KITAP1" Relationship="Self.FK_TBL_HAREKET_TBL_KITAP1" FromRole="TBL_HAREKET" ToRole="TBL_KITAP" />
           <NavigationProperty Name="TBL_KITAP2" Relationship="Self.FK_TBL_HAREKET_TBL_KITAP2" FromRole="TBL_HAREKET" ToRole="TBL_KITAP" />
+          <NavigationProperty Name="TBL_PERSONEL" Relationship="Self.FK_TBL_HAREKET_TBL_PERSONEL" FromRole="TBL_HAREKET" ToRole="TBL_PERSONEL" />
           <NavigationProperty Name="TBL_UYELER" Relationship="Self.FK_TBL_HAREKET_TBL_UYELER" FromRole="TBL_HAREKET" ToRole="TBL_UYELER" />
           <NavigationProperty Name="TBL_UYELER1" Relationship="Self.FK_TBL_HAREKET_TBL_UYELER1" FromRole="TBL_HAREKET" ToRole="TBL_UYELER" />
         </EntityType>
@@ -335,6 +352,7 @@
           </Key>
           <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="PERSONEL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TBL_HAREKET" Relationship="Self.FK_TBL_HAREKET_TBL_PERSONEL" FromRole="TBL_PERSONEL" ToRole="TBL_HAREKET" />
         </EntityType>
         <EntityType Name="TBL_UYELER">
           <Key>
@@ -423,6 +441,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_TBL_HAREKET_TBL_PERSONEL">
+          <End Role="TBL_PERSONEL" Type="Self.TBL_PERSONEL" Multiplicity="0..1" />
+          <End Role="TBL_HAREKET" Type="Self.TBL_HAREKET" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_PERSONEL">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TBL_HAREKET">
+              <PropertyRef Name="PERSONEL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_TBL_HAREKET_TBL_UYELER">
           <End Role="TBL_UYELER" Type="Self.TBL_UYELER" Multiplicity="0..1" />
           <End Role="TBL_HAREKET" Type="Self.TBL_HAREKET" Multiplicity="*" />
@@ -471,7 +501,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DB_Kutuphane_Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DB_Kutuphane_Entities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="TBL_CEZALAR" EntityType="Self.TBL_CEZALAR" />
           <EntitySet Name="TBL_HAREKET" EntityType="Self.TBL_HAREKET" />
@@ -501,6 +531,10 @@
             <End Role="TBL_KITAP" EntitySet="TBL_KITAP" />
             <End Role="TBL_HAREKET" EntitySet="TBL_HAREKET" />
           </AssociationSet>
+          <AssociationSet Name="FK_TBL_HAREKET_TBL_PERSONEL" Association="Self.FK_TBL_HAREKET_TBL_PERSONEL">
+            <End Role="TBL_PERSONEL" EntitySet="TBL_PERSONEL" />
+            <End Role="TBL_HAREKET" EntitySet="TBL_HAREKET" />
+          </AssociationSet>
           <AssociationSet Name="FK_TBL_HAREKET_TBL_UYELER" Association="Self.FK_TBL_HAREKET_TBL_UYELER">
             <End Role="TBL_UYELER" EntitySet="TBL_UYELER" />
             <End Role="TBL_HAREKET" EntitySet="TBL_HAREKET" />
@@ -523,9 +557,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DB_Kutuphane_ModelStoreContainer" CdmEntityContainer="DB_Kutuphane_Entities">
+        <EntityContainerMapping StorageEntityContainer="DB_Kutuphane_Model2StoreContainer" CdmEntityContainer="DB_Kutuphane_Entities2">
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="DB_Kutuphane_Model.sysdiagrams">
+            <EntityTypeMapping TypeName="DB_Kutuphane_Model2.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -536,7 +570,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TBL_CEZALAR">
-            <EntityTypeMapping TypeName="DB_Kutuphane_Model.TBL_CEZALAR">
+            <EntityTypeMapping TypeName="DB_Kutuphane_Model2.TBL_CEZALAR">
               <MappingFragment StoreEntitySet="TBL_CEZALAR">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="UYE" ColumnName="UYE" />
@@ -548,7 +582,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TBL_HAREKET">
-            <EntityTypeMapping TypeName="DB_Kutuphane_Model.TBL_HAREKET">
+            <EntityTypeMapping TypeName="DB_Kutuphane_Model2.TBL_HAREKET">
               <MappingFragment StoreEntitySet="TBL_HAREKET">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="KITAP" ColumnName="KITAP" />
@@ -560,7 +594,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TBL_KASA">
-            <EntityTypeMapping TypeName="DB_Kutuphane_Model.TBL_KASA">
+            <EntityTypeMapping TypeName="DB_Kutuphane_Model2.TBL_KASA">
               <MappingFragment StoreEntitySet="TBL_KASA">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="AY" ColumnName="AY" />
@@ -569,7 +603,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TBL_KATEGORI">
-            <EntityTypeMapping TypeName="DB_Kutuphane_Model.TBL_KATEGORI">
+            <EntityTypeMapping TypeName="DB_Kutuphane_Model2.TBL_KATEGORI">
               <MappingFragment StoreEntitySet="TBL_KATEGORI">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="AD" ColumnName="AD" />
@@ -577,7 +611,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TBL_KITAP">
-            <EntityTypeMapping TypeName="DB_Kutuphane_Model.TBL_KITAP">
+            <EntityTypeMapping TypeName="DB_Kutuphane_Model2.TBL_KITAP">
               <MappingFragment StoreEntitySet="TBL_KITAP">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="AD" ColumnName="AD" />
@@ -591,7 +625,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TBL_PERSONEL">
-            <EntityTypeMapping TypeName="DB_Kutuphane_Model.TBL_PERSONEL">
+            <EntityTypeMapping TypeName="DB_Kutuphane_Model2.TBL_PERSONEL">
               <MappingFragment StoreEntitySet="TBL_PERSONEL">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="PERSONEL" ColumnName="PERSONEL" />
@@ -599,7 +633,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TBL_UYELER">
-            <EntityTypeMapping TypeName="DB_Kutuphane_Model.TBL_UYELER">
+            <EntityTypeMapping TypeName="DB_Kutuphane_Model2.TBL_UYELER">
               <MappingFragment StoreEntitySet="TBL_UYELER">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="AD" ColumnName="AD" />
@@ -614,7 +648,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TBL_YAZAR">
-            <EntityTypeMapping TypeName="DB_Kutuphane_Model.TBL_YAZAR">
+            <EntityTypeMapping TypeName="DB_Kutuphane_Model2.TBL_YAZAR">
               <MappingFragment StoreEntitySet="TBL_YAZAR">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="AD" ColumnName="AD" />

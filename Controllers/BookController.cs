@@ -9,7 +9,7 @@ namespace Devrekani_Sehitler_Kutuphanesi.Controllers
     public class BookController : Controller
     {
         // GET: Book
-        DB_Kutuphane_Entities db = new DB_Kutuphane_Entities();
+        DB_Kutuphane_Entities2 db = new DB_Kutuphane_Entities2();
         public ActionResult Index(string p)
         {
             var kitaplar = from k in db.TBL_KITAP select k;
