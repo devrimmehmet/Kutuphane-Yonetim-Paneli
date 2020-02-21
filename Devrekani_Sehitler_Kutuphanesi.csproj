@@ -143,6 +143,7 @@
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\LoanController.cs" />
+    <Compile Include="Controllers\OperationController.cs" />
     <Compile Include="Controllers\StaffController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\WriterController.cs" />
@@ -274,6 +275,8 @@
     <Content Include="Views\Users\UyeGetir.cshtml" />
     <Content Include="Views\Loan\OduncVer.cshtml" />
     <Content Include="Views\Loan\Index.cshtml" />
+    <Content Include="Views\Loan\Odunciade.cshtml" />
+    <Content Include="Views\Operation\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

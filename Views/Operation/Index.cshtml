@@ -1,12 +1,11 @@
 ﻿@using Devrekani_Sehitler_Kutuphanesi.Models.Entity
 @model List<TBL_HAREKET>
-
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-<h2>Ödünç Verilmiş Kitaplar</h2>
+<h2>İadesi Alınan Kitap Listesi</h2>
 
 <table class="table table-bordered">
     <tr>
@@ -15,8 +14,8 @@
         <th>Üye</th>
         <th>Personel</th>
         <th>Kitabın Veriliş Tarihi</th>
-        <th>Beklenen İade Tarihi</th>   
-        <th>Durum</th>
+        <th>Üye İade Tarihi</th>
+        @*<th>DETAYLAR</th>*@
     </tr>
     @foreach (var k in Model)
     {
@@ -26,10 +25,12 @@
             <td>@k.TBL_UYELER.AD&nbsp;@k.TBL_UYELER.SOYAD </td>
             <td>@k.TBL_PERSONEL.PERSONEL</td>
             <td>@Convert.ToDateTime(k.ALISTARIHI).ToString("dd/MM/yyyy")</td>
-            <td>@Convert.ToDateTime(k.IADETARIHI).ToString("dd/MM/yyyy")</td>
-            <td><a href="/loan/odunciade/@k.ID" class="btn btn-danger">Kitabı Teslim Al</a> </td>
+            <td>@Convert.ToDateTime(k.UYEGETIRTARIH).ToString("dd/MM/yyyy")</td>
+            @*<td><a href="/loan/odunciade/@k.ID" class="btn btn-danger" style="">Detaylar</a> </td>*@
         </tr>
     }
 
 
 </table>
+
+

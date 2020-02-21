@@ -24,16 +24,18 @@
     </div>
     <div style="margin-top:15px">
         <label>Kitap Veriliş Tarihi</label>
-        <input type="text" class="form-control" name="ALISTARIHI" value="@DateTime.Now.ToShortDateString()"  />
+        <input type="text" class="form-control" name="ALISTARIHI" value="@DateTime.Now.ToShortDateString()" />
     </div>
     <div style="margin-top:15px">
         <label>Kitap İade Tarihi</label>
-        <input type="text" class="form-control" name="IADETARIHI" value="@DateTime.Now.AddDays(14).ToShortDateString()"  />
+        <input type="text" class="form-control" name="IADETARIHI" value="@DateTime.Now.AddDays(14).ToShortDateString()" />
     </div>
 
     <div style="margin-top:15px">
         <button class="btn btn-group" style="background-color:#4800ff; color:white">Kitabı Ödünç Ver</button>
+   <input type="hidden" value="False" name="ISLEMDURUM" />
     </div>
+  
 </form>
 
 

@@ -19,7 +19,6 @@ namespace Devrekani_Sehitler_Kutuphanesi.Models.Entity
         {
             this.TBL_CEZALAR = new HashSet<TBL_CEZALAR>();
             this.TBL_HAREKET = new HashSet<TBL_HAREKET>();
-            this.TBL_HAREKET1 = new HashSet<TBL_HAREKET>();
         }
     
         public int ID { get; set; }
@@ -36,7 +35,5 @@ namespace Devrekani_Sehitler_Kutuphanesi.Models.Entity
         public virtual ICollection<TBL_CEZALAR> TBL_CEZALAR { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_HAREKET> TBL_HAREKET { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TBL_HAREKET> TBL_HAREKET1 { get; set; }
     }
 }

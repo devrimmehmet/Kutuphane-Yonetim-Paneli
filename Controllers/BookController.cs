@@ -80,6 +80,7 @@ namespace Devrekani_Sehitler_Kutuphanesi.Controllers
             kitap.BASKIYILI = p.BASKIYILI;
             kitap.SAYFA = p.SAYFA;
             kitap.YAYINEVI = p.YAYINEVI;
+            kitap.DURUM = true;
             var ktg = db.TBL_KATEGORI.Where(k => k.ID == p.TBL_KATEGORI.ID).FirstOrDefault();
             var yzr = db.TBL_YAZAR.Where(y => y.ID == p.TBL_YAZAR.ID).FirstOrDefault();
             kitap.KATEGORI = ktg.ID;

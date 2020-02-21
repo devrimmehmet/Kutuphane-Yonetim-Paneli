@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DB_Kutuphane_Model2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DB_Kutuphane_Model2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -24,18 +24,20 @@
           <Property Name="BASLANGIC" Type="smalldatetime" />
           <Property Name="BITIS" Type="smalldatetime" />
           <Property Name="PARA" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="HAREKET" Type="tinyint" />
+          <Property Name="HAREKET" Type="int" />
         </EntityType>
         <EntityType Name="TBL_HAREKET">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="KITAP" Type="int" />
           <Property Name="UYE" Type="int" />
           <Property Name="PERSONEL" Type="tinyint" />
           <Property Name="ALISTARIHI" Type="smalldatetime" />
           <Property Name="IADETARIHI" Type="smalldatetime" />
+          <Property Name="UYEGETIRTARIH" Type="smalldatetime" />
+          <Property Name="ISLEMDURUM" Type="bit" />
         </EntityType>
         <EntityType Name="TBL_KASA">
           <Key>
@@ -266,8 +268,7 @@
             <End Role="TBL_KITAP" EntitySet="TBL_KITAP" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DB_Kutuphane_Model2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -306,11 +307,10 @@
           <Property Name="IADETARIHI" Type="DateTime" Precision="0" />
           <NavigationProperty Name="TBL_CEZALAR" Relationship="Self.FK_TBL_CEZALAR_TBL_HAREKET" FromRole="TBL_HAREKET" ToRole="TBL_CEZALAR" />
           <NavigationProperty Name="TBL_KITAP" Relationship="Self.FK_TBL_HAREKET_TBL_KITAP" FromRole="TBL_HAREKET" ToRole="TBL_KITAP" />
-          <NavigationProperty Name="TBL_KITAP1" Relationship="Self.FK_TBL_HAREKET_TBL_KITAP1" FromRole="TBL_HAREKET" ToRole="TBL_KITAP" />
-          <NavigationProperty Name="TBL_KITAP2" Relationship="Self.FK_TBL_HAREKET_TBL_KITAP2" FromRole="TBL_HAREKET" ToRole="TBL_KITAP" />
           <NavigationProperty Name="TBL_PERSONEL" Relationship="Self.FK_TBL_HAREKET_TBL_PERSONEL" FromRole="TBL_HAREKET" ToRole="TBL_PERSONEL" />
           <NavigationProperty Name="TBL_UYELER" Relationship="Self.FK_TBL_HAREKET_TBL_UYELER" FromRole="TBL_HAREKET" ToRole="TBL_UYELER" />
-          <NavigationProperty Name="TBL_UYELER1" Relationship="Self.FK_TBL_HAREKET_TBL_UYELER1" FromRole="TBL_HAREKET" ToRole="TBL_UYELER" />
+          <Property Name="ISLEMDURUM" Type="Boolean" />
+          <Property Name="UYEGETIRTARIH" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="TBL_KASA">
           <Key>
@@ -341,8 +341,6 @@
           <Property Name="SAYFA" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
           <Property Name="DURUM" Type="Boolean" />
           <NavigationProperty Name="TBL_HAREKET" Relationship="Self.FK_TBL_HAREKET_TBL_KITAP" FromRole="TBL_KITAP" ToRole="TBL_HAREKET" />
-          <NavigationProperty Name="TBL_HAREKET1" Relationship="Self.FK_TBL_HAREKET_TBL_KITAP1" FromRole="TBL_KITAP" ToRole="TBL_HAREKET" />
-          <NavigationProperty Name="TBL_HAREKET2" Relationship="Self.FK_TBL_HAREKET_TBL_KITAP2" FromRole="TBL_KITAP" ToRole="TBL_HAREKET" />
           <NavigationProperty Name="TBL_KATEGORI" Relationship="Self.FK_TBL_KITAP_TBL_KATEGORI" FromRole="TBL_KITAP" ToRole="TBL_KATEGORI" />
           <NavigationProperty Name="TBL_YAZAR" Relationship="Self.FK_TBL_KITAP_TBL_YAZAR" FromRole="TBL_KITAP" ToRole="TBL_YAZAR" />
         </EntityType>
@@ -369,7 +367,6 @@
           <Property Name="OKUL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="TBL_CEZALAR" Relationship="Self.FK_TBL_CEZALAR_TBL_UYELER" FromRole="TBL_UYELER" ToRole="TBL_CEZALAR" />
           <NavigationProperty Name="TBL_HAREKET" Relationship="Self.FK_TBL_HAREKET_TBL_UYELER" FromRole="TBL_UYELER" ToRole="TBL_HAREKET" />
-          <NavigationProperty Name="TBL_HAREKET1" Relationship="Self.FK_TBL_HAREKET_TBL_UYELER1" FromRole="TBL_UYELER" ToRole="TBL_HAREKET" />
         </EntityType>
         <EntityType Name="TBL_YAZAR">
           <Key>
@@ -584,6 +581,8 @@
           <EntitySetMapping Name="TBL_HAREKET">
             <EntityTypeMapping TypeName="DB_Kutuphane_Model2.TBL_HAREKET">
               <MappingFragment StoreEntitySet="TBL_HAREKET">
+                <ScalarProperty Name="UYEGETIRTARIH" ColumnName="UYEGETIRTARIH" />
+                <ScalarProperty Name="ISLEMDURUM" ColumnName="ISLEMDURUM" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="KITAP" ColumnName="KITAP" />
                 <ScalarProperty Name="UYE" ColumnName="UYE" />

@@ -26,14 +26,13 @@ namespace Devrekani_Sehitler_Kutuphanesi.Models.Entity
         public Nullable<byte> PERSONEL { get; set; }
         public Nullable<System.DateTime> ALISTARIHI { get; set; }
         public Nullable<System.DateTime> IADETARIHI { get; set; }
+        public Nullable<bool> ISLEMDURUM { get; set; }
+        public Nullable<System.DateTime> UYEGETIRTARIH { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_CEZALAR> TBL_CEZALAR { get; set; }
         public virtual TBL_KITAP TBL_KITAP { get; set; }
-        public virtual TBL_KITAP TBL_KITAP1 { get; set; }
-        public virtual TBL_KITAP TBL_KITAP2 { get; set; }
         public virtual TBL_PERSONEL TBL_PERSONEL { get; set; }
         public virtual TBL_UYELER TBL_UYELER { get; set; }
-        public virtual TBL_UYELER TBL_UYELER1 { get; set; }
     }
 }
