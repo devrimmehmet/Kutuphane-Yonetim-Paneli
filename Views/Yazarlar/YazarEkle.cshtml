@@ -1,0 +1,26 @@
+﻿@model Devrekani_Sehitler_Kutuphanesi.Models.Entity.TBL_YAZAR
+@{
+    ViewBag.Title = "YazarEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+    <h2>Yeni Yazar Ekleme Sayfası</h2>
+    <form class="form-group" method="post">
+        <div></div>
+        <div style="margin-top:15px">
+            <label>Adı</label>
+            @Html.TextBoxFor(y => y.AD, new { @class = "form-control",@maxlength="30" })
+        </div>
+        <div style="margin-top:15px">
+            <label>Soyadı</label>
+            @Html.TextBoxFor(y => y.SOYAD, new { @class = "form-control",@maxlength="30" })
+        </div>
+        <div style="margin-top:15px">
+            <label>Hakkında</label>
+            @Html.TextAreaFor(y => y.DETAY, new { @class = "form-control",@maxlength="1000" })
+        </div>
+        <div style="margin-top:15px">
+           <button class="btn btn-info">Yeni Yazar Ekle</button>
+          
+        </div>
+    </form>
+

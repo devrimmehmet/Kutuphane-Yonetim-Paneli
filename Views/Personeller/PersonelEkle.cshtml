@@ -1,0 +1,19 @@
+﻿@model Devrekani_Sehitler_Kutuphanesi.Models.Entity.TBL_PERSONEL
+
+@{
+    ViewBag.Title = "PersonelEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Yeni Personel Ekleme Sayfası</h2>
+<form class="form-group" method="post">
+
+    <div style="margin-top:15px">
+        <label>Adı Soyadı</label>
+        @Html.TextBoxFor(y => y.PERSONEL, new { @class = "form-control",@maxlength="50" })
+        @Html.ValidationMessageFor(y => y.PERSONEL,"",new{ @style = "color:red" } )
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-info" id="Btn1">Yeni Personel Ekle</button>
+    </div>
+</form>

@@ -140,14 +140,14 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\BookController.cs" />
-    <Compile Include="Controllers\CategoryController.cs" />
-    <Compile Include="Controllers\LoanController.cs" />
-    <Compile Include="Controllers\OperationController.cs" />
-    <Compile Include="Controllers\ShowcaseController.cs" />
-    <Compile Include="Controllers\StaffController.cs" />
-    <Compile Include="Controllers\UsersController.cs" />
-    <Compile Include="Controllers\WriterController.cs" />
+    <Compile Include="Controllers\KitaplarController.cs" />
+    <Compile Include="Controllers\KategorilerController.cs" />
+    <Compile Include="Controllers\EmanetlerController.cs" />
+    <Compile Include="Controllers\HareketlerController.cs" />
+    <Compile Include="Controllers\AnaSayfaController.cs" />
+    <Compile Include="Controllers\PersonellerController.cs" />
+    <Compile Include="Controllers\UyelerController.cs" />
+    <Compile Include="Controllers\YazarlarController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -349,25 +349,25 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\Layout.cshtml" />
-    <Content Include="Views\Category\Index.cshtml" />
-    <Content Include="Views\Category\KategoriEkle.cshtml" />
-    <Content Include="Views\Category\KategoriGetir.cshtml" />
-    <Content Include="Views\Writer\Index.cshtml" />
-    <Content Include="Views\Writer\YazarEkle.cshtml" />
-    <Content Include="Views\Writer\YazarGetir.cshtml" />
-    <Content Include="Views\Book\Index.cshtml" />
-    <Content Include="Views\Book\KitapEkle.cshtml" />
-    <Content Include="Views\Book\KitapGetir.cshtml" />
-    <Content Include="Views\Staff\Index.cshtml" />
-    <Content Include="Views\Staff\PersonelEkle.cshtml" />
-    <Content Include="Views\Staff\PersonelGetir.cshtml" />
-    <Content Include="Views\Users\Index.cshtml" />
-    <Content Include="Views\Users\UyeEkle.cshtml" />
-    <Content Include="Views\Users\UyeGetir.cshtml" />
-    <Content Include="Views\Loan\OduncVer.cshtml" />
-    <Content Include="Views\Loan\Index.cshtml" />
-    <Content Include="Views\Loan\Odunciade.cshtml" />
-    <Content Include="Views\Operation\Index.cshtml" />
+    <Content Include="Views\Kategoriler\Index.cshtml" />
+    <Content Include="Views\Kategoriler\KategoriEkle.cshtml" />
+    <Content Include="Views\Kategoriler\KategoriGetir.cshtml" />
+    <Content Include="Views\Yazarlar\Index.cshtml" />
+    <Content Include="Views\Yazarlar\YazarEkle.cshtml" />
+    <Content Include="Views\Yazarlar\YazarGetir.cshtml" />
+    <Content Include="Views\Kitaplar\Index.cshtml" />
+    <Content Include="Views\Kitaplar\KitapEkle.cshtml" />
+    <Content Include="Views\Kitaplar\KitapGetir.cshtml" />
+    <Content Include="Views\Personeller\Index.cshtml" />
+    <Content Include="Views\Personeller\PersonelEkle.cshtml" />
+    <Content Include="Views\Personeller\PersonelGetir.cshtml" />
+    <Content Include="Views\Uyeler\Index.cshtml" />
+    <Content Include="Views\Uyeler\UyeEkle.cshtml" />
+    <Content Include="Views\Uyeler\UyeGetir.cshtml" />
+    <Content Include="Views\Emanetler\OduncVer.cshtml" />
+    <Content Include="Views\Emanetler\Index.cshtml" />
+    <Content Include="Views\Emanetler\Odunciade.cshtml" />
+    <Content Include="Views\Hareketler\Index.cshtml" />
     <Content Include="web\.browserslistrc" />
     <Content Include="web\.travis.yml" />
     <Content Include="web\LICENSE" />
@@ -402,7 +402,7 @@
     <Content Include="web\vendor\fontawesome-free\webfonts\fa-solid-900.woff2" />
     <Content Include="web\vendor\jquery\jquery.min.map" />
     <Content Include="web\vendor\jquery\jquery.slim.min.map" />
-    <Content Include="Views\ShowCase\Index.cshtml" />
+    <Content Include="Views\AnaSayfa\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
