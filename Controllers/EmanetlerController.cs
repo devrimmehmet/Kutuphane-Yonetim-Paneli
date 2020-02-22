@@ -19,18 +19,12 @@ namespace Devrekani_Sehitler_Kutuphanesi.Controllers
         [HttpGet]
         public ActionResult OduncVer()
         {
-           // List<SelectListItem>
-           //deger1 = (from i in db.TBL_PERSONEL.ToList()
-           //          select new SelectListItem
-           //          { Text = i.PERSONEL, Value = i.ID.ToString() }).ToList();
-           // ViewBag.dgr1 = deger1;
             return View();
         }
         [HttpPost]
         public ActionResult OduncVer(TBL_HAREKET p)
         {
-           // var ktg = db.TBL_PERSONEL.Where(k => k.ID == p.TBL_PERSONEL.ID).FirstOrDefault();
-          //  p.TBL_H = ktg;
+            db.TBL_HAREKET.Add(p);
             db.SaveChanges();
             return View();
            
