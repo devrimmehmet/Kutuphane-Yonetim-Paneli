@@ -13,8 +13,8 @@
     <meta name="description" content="Devrekani Şehitler Kütüphanesi">
     <meta name="author" content="Devrim Mehmet Pattabanoğlu">
 
-    <title>Devrekani Şehitler Kütüphanesi</title>
-
+    <title>Devrekani</title>
+    <title2>Şehitler Kütüphanesi</title2>
     <!-- Custom fonts for this theme -->
     <link href="~/web/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -30,7 +30,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Devrekani Şehitler Kütüphanesi</a>
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Şehitler Kütüphanesi</a>
             <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
@@ -59,7 +59,7 @@
             @*<img class="masthead-avatar mb-5" src="~/web/img/library.jpg" alt="" width="1000" height="200">*@
 
             <!-- Masthead Heading -->
-            <h1 class="masthead-heading text-center mb-0" style="color:#ff0000">Kütüphanemizin Web Sayfasına Hoş Geldiniz...</h1>
+            <h1 class="masthead-heading text-center mb-0" style="color:#ff0000">Devrekani Şehitler Kütüphanesi</h1>
 
             <!-- Icon Divider -->
             <div class="divider-custom divider-light">
@@ -88,26 +88,20 @@
                 @*<div class="divider-custom-icon">
                     <i class="fas fa-star"></i>
                 </div>*@
-                @*<div class="divider-custom-line"></div>*@
+              <div class="divider-custom-line"></div>
             </div>
 
             <!-- About Section Content -->
-            <div class="divider-custom">
+            <div class="row">
 
                 @foreach (var x in Model.Deger2)
                 {
-                    <b>  @x.ACIKLAMA </b>
+                    <div align="center"><p> <b> &emsp;@x.ACIKLAMA </b></p> </div>
                     <br />
                     <br />
                 }
 
-                <!-- About Section Button -->
-                @*<div class="text-center mt-4">
-                        <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/themes/freelancer/">
-                            <i class="fas fa-download mr-2"></i>
-                            Free Download!
-                        </a>
-                    </div>*@
+              
 
             </div>
     </section>
