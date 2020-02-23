@@ -12,6 +12,8 @@ namespace Devrekani_Sehitler_Kutuphanesi.Models.Entity
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class DB_Kutuphane_Entities2 : DbContext
     {
@@ -36,5 +38,10 @@ namespace Devrekani_Sehitler_Kutuphanesi.Models.Entity
         public virtual DbSet<TBL_YAZAR> TBL_YAZAR { get; set; }
         public virtual DbSet<TBL_HAKKIMIZDA> TBL_HAKKIMIZDA { get; set; }
         public virtual DbSet<TBL_ILETISIM> TBL_ILETISIM { get; set; }
+    
+        public virtual ObjectResult<string> EnFazlaKitabıOlanYazar()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("EnFazlaKitabıOlanYazar");
+        }
     }
 }

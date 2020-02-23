@@ -16,7 +16,7 @@ namespace Devrekani_Sehitler_Kutuphanesi
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "AnaSayfa", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Anasayfa", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
