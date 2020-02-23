@@ -11,7 +11,8 @@ namespace Devrekani_Sehitler_Kutuphanesi.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TBL_YAZAR
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,12 +20,16 @@ namespace Devrekani_Sehitler_Kutuphanesi.Models.Entity
         {
             this.TBL_KITAP = new HashSet<TBL_KITAP>();
         }
-    
+
         public int ID { get; set; }
+        [Required(ErrorMessage = "Yazar Adýný Boþ Geçemezsiniz")]
+        [StringLength(30, ErrorMessage = "Yazar Adý 30 Karakterden Uzun Olamaz")]
         public string AD { get; set; }
+        [Required(ErrorMessage = "Yazar Soyadýný Boþ Geçemezsiniz")]
+        [StringLength(30, ErrorMessage = "Yazar Soyadý 30 Karakterden Uzun Olamaz")]
         public string SOYAD { get; set; }
         public string DETAY { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_KITAP> TBL_KITAP { get; set; }
     }

@@ -16,7 +16,7 @@
     </div>
 }
 <table class="table table-bordered">
-    <tr>
+    <tr style="background-color:rgb(252,178,22)">
         <th>ID</th>
         <th>Adı</th>
         <th>Soyadı</th>
@@ -31,7 +31,7 @@
             <td>@y.AD</td>
             <td>@y.SOYAD</td>
             <td>@y.DETAY</td>
-            <td>@Html.ActionLink("Sil", "YazarSil", new { id = y.ID }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek İstiyor Musunuz ?')" }) </td>
+            <td>@Html.ActionLink("Sil", "YazarSil", new { id = y.ID }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek İstiyor Musunuz ?')"}) </td>
             <td><a href="/Yazarlar/YazarGetir/@y.ID" class="btn btn-success">Güncelle</a></td>
 
         </tr>

@@ -18,16 +18,12 @@ namespace Devrekani_Sehitler_Kutuphanesi.Controllers
             {
                 yazarlar = yazarlar.Where(x => x.AD.Contains(p));
             }
-            //var kitaplar = db.TBL_KITAP.ToList();
+          
             return View(yazarlar.ToList());
         }
 
 
-        //public ActionResult Index()
-        //{
-        //    var degerler = db.TBL_YAZAR.ToList();
-        //    return View(degerler);
-        //}
+        
         [HttpGet]
         public ActionResult YazarEkle()
         {
@@ -37,6 +33,10 @@ namespace Devrekani_Sehitler_Kutuphanesi.Controllers
         [HttpPost]
         public ActionResult YazarEkle(TBL_YAZAR p)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("YazarEkle");
+            }
             db.TBL_YAZAR.Add(p);
             db.SaveChanges();
             return View();
@@ -55,6 +55,10 @@ namespace Devrekani_Sehitler_Kutuphanesi.Controllers
         }
         public ActionResult YazarGuncelle(TBL_YAZAR p)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("YazarGetir");
+            }
             var yzr = db.TBL_YAZAR.Find(p.ID);
             yzr.AD = p.AD;
             yzr.SOYAD = p.SOYAD;

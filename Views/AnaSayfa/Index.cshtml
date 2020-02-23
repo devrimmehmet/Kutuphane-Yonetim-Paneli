@@ -12,9 +12,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Devrekani Şehitler Kütüphanesi">
     <meta name="author" content="Devrim Mehmet Pattabanoğlu">
-
-    <title>Devrekani</title>
-    <title2>Şehitler Kütüphanesi</title2>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <title>Devrekani Şehitler Kütüphanesi</title>
+  
     <!-- Custom fonts for this theme -->
     <link href="~/web/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -64,15 +64,15 @@
             <!-- Masthead Heading -->
             <h1 class="masthead-heading text-center mb-0" style="color:#ff0000">Devrekani Şehitler Kütüphanesi</h1>
 
-            <!-- Icon Divider -->
+             @*Icon Divider 
             <div class="divider-custom divider-light">
                 <div class="divider-custom-line"></div>
                 <div class="divider-custom-icon">
                     <i class="fas fa-chevron-up"></i>
                 </div>
                 <div class="divider-custom-line"></div>
-            </div>
-
+            </div>*@
+            <br />
             <!-- Masthead Subheading -->
             <p class="masthead-subheading font-weight-bold mb-0" style="color:#ff0000"><b>Çiçek Dolu Bir Bahçe, Kitap Dolu Bir Ocak</b></p>
 
@@ -89,9 +89,9 @@
             <div class="divider-custom divider-light">
                 <div class="divider-custom-line"></div>
                 @*<div class="divider-custom-icon">
-                    <i class="fas fa-star"></i>
-                </div>*@
-              <div class="divider-custom-line"></div>
+                        <i class="fas fa-star"></i>
+                    </div>*@
+                <div class="divider-custom-line"></div>
             </div>
 
             <!-- About Section Content -->
@@ -104,11 +104,14 @@
                     <br />
                 }
 
-              
+
 
             </div>
     </section>
-
+    <a class="weatherwidget-io" href="https://forecast7.com/tr/41d6033d84/devrekani/" data-label_1="DEVREKANI" data-label_2="Hava Durumu" data-font="Open Sans Condensed" data-icons="Climacons Animated" data-mode="Forecast" data-days="3" data-theme="original">DEVREKANI Hava Durumu</a>
+    <script>
+        !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+    </script>
     <!-- Contact Section -->
     <section class="page-section" id="contact">
         <div class="container">
@@ -129,7 +132,7 @@
             <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                    @using (Html.BeginForm("Index", "AnaSayfa", FormMethod.Post))
+                    @using (Html.BeginForm("Index", "Anasayfa", FormMethod.Post))
                     {
 
 
@@ -257,8 +260,11 @@
                                 </div>
                             </div>
                             <img class="img-fluid" src="@x.KITAPRESIM" alt="" width="300" height="100">
+
                         </div>
                     </div>
+                    <div> <br /><hr /><br /></div>
+                    <div> <br /><hr /><br /></div>
                 }
 
 

@@ -10,25 +10,25 @@
 
     <div style="margin-top:15px">
         <label>Üye ID</label>
-        @Html.TextBoxFor(k => k.UYE, new { @class = "form-control" })
+        @Html.TextBoxFor(k => k.UYE, new { @class = "form-control" ,@maxlength="9"})
 
     </div>
     <div style="margin-top:15px">
         <label>Kitap ID</label>
-        @Html.TextBoxFor(k => k.KITAP, new { @class = "form-control"})
+        @Html.TextBoxFor(k => k.KITAP, new { @class = "form-control",@maxlength="9"})
 
     </div>
     <div style="margin-top:15px">
         <label>Personel ID</label>
-        @Html.TextBoxFor(k => k.PERSONEL, new { @class = "form-control" })
+        @Html.TextBoxFor(k => k.PERSONEL, new { @class = "form-control" ,@maxlength="2"})
     </div>
     <div style="margin-top:15px">
         <label>Kitap Veriliş Tarihi</label>
-        <input type="text" class="form-control" name="ALISTARIHI" value="@DateTime.Now.ToShortDateString()"  />
+        <input type="text" class="form-control" name="ALISTARIHI" value="@DateTime.Now.ToShortDateString()" readonly="true"  />
     </div>
     <div style="margin-top:15px">
         <label>Kitap İade Tarihi</label>
-        <input type="text" class="form-control" name="IADETARIHI" value="@DateTime.Now.AddDays(14).ToShortDateString()"  />
+        <input type="text" class="form-control" name="IADETARIHI" value="@DateTime.Now.AddDays(14).ToShortDateString()" readonly="true"  />
     </div>
 
     <div style="margin-top:15px">

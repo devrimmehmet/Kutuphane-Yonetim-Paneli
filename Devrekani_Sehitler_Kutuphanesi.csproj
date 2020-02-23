@@ -140,11 +140,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\IstatistiklerController.cs" />
     <Compile Include="Controllers\KitaplarController.cs" />
     <Compile Include="Controllers\KategorilerController.cs" />
     <Compile Include="Controllers\EmanetlerController.cs" />
     <Compile Include="Controllers\HareketlerController.cs" />
-    <Compile Include="Controllers\AnaSayfaController.cs" />
+    <Compile Include="Controllers\AnasayfaController.cs" />
     <Compile Include="Controllers\PersonellerController.cs" />
     <Compile Include="Controllers\UyelerController.cs" />
     <Compile Include="Controllers\YazarlarController.cs" />
@@ -214,6 +215,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
+    <Content Include="favicon1.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -262,7 +264,18 @@
     <Content Include="web2\js\moment-2.2.1.js" />
     <Content Include="web2\js\site.js" />
     <Content Include="web2\js\underscore-min.js" />
+    <Content Include="web2\Resimler\1.jpg" />
+    <Content Include="web2\Resimler\2.jpg" />
+    <Content Include="web2\Resimler\3.jfif" />
+    <Content Include="web2\Resimler\4.jpg" />
     <Content Include="web2\w3layouts-License.txt" />
+    <Content Include="webhava\css\style.css" />
+    <Content Include="webhava\images\bg.jpg" />
+    <Content Include="webhava\images\img1.jpg" />
+    <Content Include="webhava\index.html" />
+    <Content Include="webhava\js\jquery-2.1.4.min.js" />
+    <Content Include="webhava\js\skycons.js" />
+    <Content Include="webhava\w3layouts-License.txt" />
     <Content Include="web\.gitignore" />
     <Content Include="web\css\freelancer.css" />
     <Content Include="web\css\freelancer.min.css" />
@@ -402,7 +415,11 @@
     <Content Include="web\vendor\fontawesome-free\webfonts\fa-solid-900.woff2" />
     <Content Include="web\vendor\jquery\jquery.min.map" />
     <Content Include="web\vendor\jquery\jquery.slim.min.map" />
-    <Content Include="Views\AnaSayfa\Index.cshtml" />
+    <Content Include="Views\Anasayfa\Index.cshtml" />
+    <Content Include="Views\Istatistikler\Index.cshtml" />
+    <Content Include="Views\Istatistikler\Hava.cshtml" />
+    <Content Include="Views\Istatistikler\HavaDurumu.cshtml" />
+    <Content Include="Views\Istatistikler\Galeri.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

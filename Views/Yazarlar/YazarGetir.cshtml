@@ -16,11 +16,13 @@
         </div>
         <div style="margin-bottom:15px">
             <label>Adı</label>
-            @Html.TextBoxFor(y => y.AD, new { @class = "form-control",@maxlength="30" })
+            @Html.TextBoxFor(y => y.AD, new { @class = "form-control", @maxlength = "30" })
+            @Html.ValidationMessageFor(y => y.AD, "", new { @style = "color:red" })
         </div>
         <div style="margin-bottom:15px">
             <label>Soyadı</label>
-            @Html.TextBoxFor(y => y.SOYAD, new { @class = "form-control",@maxlength="30" })
+            @Html.TextBoxFor(y => y.SOYAD, new { @class = "form-control", @maxlength = "30" })
+            @Html.ValidationMessageFor(y => y.SOYAD, "", new { @style = "color:red" })
         </div>
         <div style="margin-bottom:15px">
             <label>Hakkında</label>

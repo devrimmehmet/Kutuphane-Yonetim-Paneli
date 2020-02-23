@@ -12,25 +12,25 @@
     <div style="margin-bottom:15px"></div>
     <div class="form-group">
         <label>Hareket ID</label>
-        @Html.TextBoxFor(k => k.ID, new { @class = "form-control" })
+        @Html.TextBoxFor(k => k.ID, new { @class = "form-control",@readonly="true" })
         <br />
         <label>Kitap Adı</label>
-        @Html.TextBoxFor(k => k.TBL_KITAP.AD, new { @class = "form-control" })
+        @Html.TextBoxFor(k => k.TBL_KITAP.AD, new { @class = "form-control",@readonly="true" })
         <br />
         <label>Üye</label>
-        @Html.TextBoxFor(k => k.TBL_UYELER.AD, new { @class = "form-control" })
+        @Html.TextBoxFor(k => k.TBL_UYELER.AD, new { @class = "form-control" ,@readonly="true"})
         <br />
         <label>Personel</label>
         @Html.TextBoxFor(k => k.TBL_PERSONEL.PERSONEL, new { @class = "form-control" })
         <br />
         <label>Alış Tarihi</label>
-        @Html.TextBoxFor(k => k.ALISTARIHI, "{0: dd.MM.yyyy}", new { @class = "form-control" })
+        @Html.TextBoxFor(k => k.ALISTARIHI, "{0: dd.MM.yyyy}", new { @class = "form-control" ,@readonly="true"})
         <br />
         <label>Beklenen İade Tarihi</label>
-        @Html.TextBoxFor(k => k.IADETARIHI, "{0: dd.MM.yyyy}", new { @class = "form-control" })
+        @Html.TextBoxFor(k => k.IADETARIHI, "{0: dd.MM.yyyy}", new { @class = "form-control",@readonly="true" })
         <br />
         <label>İade Tarihi</label>
-        <input type="text" class="form-control" name="UYEGETIRTARIH" value="@DateTime.Now.ToShortDateString()" />
+        <input type="text" class="form-control" name="UYEGETIRTARIH" value="@DateTime.Now.ToShortDateString()" readonly="true" />
         <br />
     </div>
     <div>

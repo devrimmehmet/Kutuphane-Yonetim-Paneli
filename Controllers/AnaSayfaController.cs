@@ -7,7 +7,7 @@ using Devrekani_Sehitler_Kutuphanesi.Models.Entity;
 using Devrekani_Sehitler_Kutuphanesi.Models.Siniflarim;
 namespace Devrekani_Sehitler_Kutuphanesi.Controllers
 {
-    public class AnaSayfaController : Controller
+    public class AnasayfaController : Controller
     {
         // GET: Showcase
         DB_Kutuphane_Entities2 db = new DB_Kutuphane_Entities2();
