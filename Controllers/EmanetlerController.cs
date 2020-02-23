@@ -29,9 +29,13 @@ namespace Devrekani_Sehitler_Kutuphanesi.Controllers
             return View();
            
         }
-        public ActionResult Odunciade(int id)
+        public ActionResult Odunciade(TBL_HAREKET p)
         {
-            var odn = db.TBL_HAREKET.Find(id);
+            var odn = db.TBL_HAREKET.Find(p.ID);
+            DateTime d1 = DateTime.Parse(odn.IADETARIHI.ToString());
+            DateTime d2 = Convert.ToDateTime(DateTime.Now.ToLongDateString());
+            TimeSpan d3 = d2 - d1;
+            ViewBag.dgr = d3.TotalDays;
             return View("Odunciade", odn);
         }
         public ActionResult OduncGuncelle(TBL_HAREKET p)

@@ -148,6 +148,7 @@
     <Compile Include="Controllers\AnasayfaController.cs" />
     <Compile Include="Controllers\PersonellerController.cs" />
     <Compile Include="Controllers\UyelerController.cs" />
+    <Compile Include="Controllers\YardimController.cs" />
     <Compile Include="Controllers\YazarlarController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -420,6 +421,7 @@
     <Content Include="Views\Istatistikler\Hava.cshtml" />
     <Content Include="Views\Istatistikler\HavaDurumu.cshtml" />
     <Content Include="Views\Istatistikler\Galeri.cshtml" />
+    <Content Include="Views\Yardim\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -32,6 +32,9 @@
         <label>İade Tarihi</label>
         <input type="text" class="form-control" name="UYEGETIRTARIH" value="@DateTime.Now.ToShortDateString()" readonly="true" />
         <br />
+        <label>Geç Gelen Gün Sayısı</label>
+        <input type="text"class="form-control" id="Gecinput" value="@ViewBag.dgr" />
+        <br />
     </div>
     <div>
         <button class="btn btn-group" style="background-color:#ff0000; color:white">Kitabı Teslim Al</button>
