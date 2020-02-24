@@ -146,6 +146,7 @@
     <Compile Include="Controllers\EmanetlerController.cs" />
     <Compile Include="Controllers\HareketlerController.cs" />
     <Compile Include="Controllers\AnasayfaController.cs" />
+    <Compile Include="Controllers\PanelimController.cs" />
     <Compile Include="Controllers\PersonellerController.cs" />
     <Compile Include="Controllers\UyeController.cs" />
     <Compile Include="Controllers\UyelerController.cs" />
@@ -233,6 +234,24 @@
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="webpanel\.gitignore" />
+    <Content Include="webpanel\css\simple-sidebar.css" />
+    <Content Include="webpanel\gulpfile.js" />
+    <Content Include="webpanel\index.html" />
+    <Content Include="webpanel\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="webpanel\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="webpanel\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="webpanel\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="webpanel\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="webpanel\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="webpanel\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="webpanel\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="webpanel\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="webpanel\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="webpanel\vendor\jquery\jquery.js" />
+    <Content Include="webpanel\vendor\jquery\jquery.min.js" />
+    <Content Include="webpanel\vendor\jquery\jquery.slim.js" />
+    <Content Include="webpanel\vendor\jquery\jquery.slim.min.js" />
     <Content Include="web2\css\bootstrap.css" />
     <Content Include="web2\css\clndr.css" />
     <Content Include="web2\css\jqvmap.css" />
@@ -544,6 +563,25 @@
     <Content Include="webregister\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Uye\GirisYap.cshtml" />
     <Content Include="Views\Uye\KayitOl.cshtml" />
+    <Content Include="Views\Shared\_LayoutPanel.cshtml" />
+    <Content Include="webpanel\.travis.yml" />
+    <Content Include="webpanel\LICENSE" />
+    <Content Include="webpanel\package-lock.json" />
+    <Content Include="webpanel\package.json" />
+    <Content Include="webpanel\README.md" />
+    <Content Include="webpanel\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="webpanel\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="webpanel\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="webpanel\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="webpanel\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="webpanel\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="webpanel\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="webpanel\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="webpanel\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="webpanel\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="webpanel\vendor\jquery\jquery.min.map" />
+    <Content Include="webpanel\vendor\jquery\jquery.slim.min.map" />
+    <Content Include="Views\Panelim\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
