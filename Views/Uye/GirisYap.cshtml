@@ -37,20 +37,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <h1 style="color:#ff0000">Devrekani Şehitler Kütüphanesi</h1>
     <div class=" w3l-login-form">
         <h2>Giriş Yap</h2>
-        <form action="#" method="POST">
-
+        @using (Html.BeginForm("GirisYap", "Uye", FormMethod.Post))
+        {
             <div class=" w3l-form-group">
                 <label>Kullanıcı Adı:</label>
                 <div class="group">
                     <i class="fas fa-user"></i>
-                    <input type="text" class="form-control" placeholder="Kullanıcı Adı" required="required" />
+                    <input type="text" class="form-control" placeholder="Kullanıcı Adı" required="required" name="MAIL" />
                 </div>
             </div>
             <div class=" w3l-form-group">
                 <label>Şifre:</label>
                 <div class="group">
                     <i class="fas fa-unlock"></i>
-                    <input type="password" class="form-control" placeholder="Şifre" required="required" />
+                    <input type="password" class="form-control" placeholder="Şifre" required="required" name="SIFRE" />
                 </div>
             </div>
             <div class="forgot">
@@ -58,11 +58,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <p><input type="checkbox">Beni Hatırla</p>
             </div>
             @*<a href="/Kategoriler/Index/" class="register"> Geçici Giriş Butonu</a>*@
-            <button type="submit"><a href="/Kategoriler/Index/" class="register"> "Geçici" Yönetim Paneli Girişi</a></button>
+            @*<button type="submit"><a href="/Kategoriler/Index/" class="register"> "Geçici" Yönetim Paneli Girişi</a></button>
             <br /> <br />
-            <button type="submit"><a href="/Panelim/Index/" class="register"> "Geçici" Öğrenci Paneli Girişi</a></button>
-        </form>
-        <p class=" w3l-register-p">Kayıtlı Değil Misiniz ?<a href="/Uye/KayitOl/" class="register"> Kayıt Ol</a></p>
+            <button type="submit"><a href="/Panelim/Index/" class="register"> "Geçici" Öğrenci Paneli Girişi</a></button>*@
+            <button type="submit"> Giriş Yap </button>
+        }
+        
+        <p class=" w3l-register-p">Kayıtlı Değil Misiniz ?<a href="/KayitOl/Kayit/" class="register"> Kayıt Ol</a></p>
     </div>
     <footer>
         <p class="agile-copyright">

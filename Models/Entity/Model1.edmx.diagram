@@ -26,6 +26,7 @@
         <AssociationConnector Association="DB_Kutuphane_Model2.FK_TBL_KITAP_TBL_YAZAR" ManuallyRouted="false" />
         <EntityTypeShape EntityType="DB_Kutuphane_Model2.TBL_HAKKIMIZDA" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="DB_Kutuphane_Model2.TBL_ILETISIM" Width="1.5" PointX="8.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_Kutuphane_Model2.TBL_MESAJLAR" Width="1.5" PointX="8.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

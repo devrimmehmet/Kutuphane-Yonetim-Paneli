@@ -141,11 +141,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\IstatistiklerController.cs" />
+    <Compile Include="Controllers\KayitOlController.cs" />
     <Compile Include="Controllers\KitaplarController.cs" />
     <Compile Include="Controllers\KategorilerController.cs" />
     <Compile Include="Controllers\EmanetlerController.cs" />
     <Compile Include="Controllers\HareketlerController.cs" />
     <Compile Include="Controllers\AnasayfaController.cs" />
+    <Compile Include="Controllers\MesajlarController.cs" />
     <Compile Include="Controllers\PanelimController.cs" />
     <Compile Include="Controllers\PersonellerController.cs" />
     <Compile Include="Controllers\UyeController.cs" />
@@ -192,6 +194,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\TBL_KITAP.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\TBL_MESAJLAR.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\TBL_PERSONEL.cs">
@@ -562,7 +567,6 @@
     <Content Include="webregister\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="webregister\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Uye\GirisYap.cshtml" />
-    <Content Include="Views\Uye\KayitOl.cshtml" />
     <Content Include="Views\Shared\_LayoutPanel.cshtml" />
     <Content Include="webpanel\.travis.yml" />
     <Content Include="webpanel\LICENSE" />
@@ -582,6 +586,11 @@
     <Content Include="webpanel\vendor\jquery\jquery.min.map" />
     <Content Include="webpanel\vendor\jquery\jquery.slim.min.map" />
     <Content Include="Views\Panelim\Index.cshtml" />
+    <Content Include="Views\KayitOl\Kayit.cshtml" />
+    <Content Include="Views\Mesajlar\Index.cshtml" />
+    <Content Include="Views\Mesajlar\YeniMesaj.cshtml" />
+    <Content Include="Views\Mesajlar\Giden.cshtml" />
+    <Content Include="Views\Panelim\Kitaplarim.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

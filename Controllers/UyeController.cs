@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Devrekani_Sehitler_Kutuphanesi.Models.Entity;
+using System.Web.Security;
 namespace Devrekani_Sehitler_Kutuphanesi.Controllers
 {
     public class UyeController : Controller
@@ -13,21 +14,28 @@ namespace Devrekani_Sehitler_Kutuphanesi.Controllers
         {
             return View();
         }
-        [HttpGet]
-        public ActionResult KayitOl()
-        {
-            return View();
-        }
         [HttpPost]
-        public ActionResult KayitOl(TBL_UYELER p)
+        public ActionResult GirisYap(TBL_UYELER p)
         {
-            if (!ModelState.IsValid)
+            var bilgiler = db.TBL_UYELER.FirstOrDefault(x => x.MAIL == p.MAIL && x.SIFRE == p.SIFRE);
+            if(bilgiler != null)
             {
-                return View("KayitOl");
+                FormsAuthentication.SetAuthCookie(bilgiler.MAIL, false);
+                Session["Mail"] = bilgiler.MAIL.ToString();
+                //TempData["id"] = bilgiler.ID.ToString();
+                //TempData["Ad"] = bilgiler.AD.ToString();
+                //TempData["Soyad"] = bilgiler.SOYAD.ToString();
+                //TempData["KullanıcıAdı"] = bilgiler.KULLANICIADI.ToString();
+                //TempData["Sifre"] = bilgiler.SIFRE.ToString();
+                //TempData["Okul"] = bilgiler.OKUL.ToString();
+                return RedirectToAction("Index","Panelim");
+
             }
-            db.TBL_UYELER.Add(p);
-            db.SaveChanges();
-            return View();
+            else
+            {
+                return View();
+            }
+
         }
     }
 }
