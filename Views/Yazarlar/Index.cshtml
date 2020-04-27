@@ -20,21 +20,23 @@
         <th>ID</th>
         <th>Adı</th>
         <th>Soyadı</th>
-        <th>Hakkında</th>
+        
         <th>Sil</th>
         <th>Güncelle</th>
+        <th>Yazarın Kitapları</th>
     </tr>
     @foreach (var y in Model)
     {
-        <tr>
-            <td>@y.ID</td>
-            <td>@y.AD</td>
-            <td>@y.SOYAD</td>
-            <td>@y.DETAY</td>
-            <td>@Html.ActionLink("Sil", "YazarSil", new { id = y.ID }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek İstiyor Musunuz ?')"}) </td>
-            <td><a href="/Yazarlar/YazarGetir/@y.ID" class="btn btn-success">Güncelle</a></td>
+<tr>
+    <td>@y.ID</td>
+    <td>@y.AD</td>
+    <td>@y.SOYAD</td>
+  
+    <td>@Html.ActionLink("Sil", "YazarSil", new { id = y.ID }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek İstiyor Musunuz ?')" }) </td>
+    <td><a href="/Yazarlar/YazarGetir/@y.ID" class="btn btn-warning">Güncelle</a></td>
+    <td><a href="/Yazarlar/YazarKitaplar/@y.ID" class="btn btn-default" style="background-color:lightcoral; color:white">Yazarın Kitapları</a></td>
 
-        </tr>
+</tr>
     }
 
 </table>

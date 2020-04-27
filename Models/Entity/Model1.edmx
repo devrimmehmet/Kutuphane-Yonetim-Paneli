@@ -71,6 +71,7 @@
           </Key>
           <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="AD" Type="varchar" MaxLength="20" />
+          <Property Name="DURUM" Type="bit" />
         </EntityType>
         <EntityType Name="TBL_KITAP">
           <Key>
@@ -361,6 +362,7 @@
           <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="AD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="TBL_KITAP" Relationship="Self.FK_TBL_KITAP_TBL_KATEGORI" FromRole="TBL_KATEGORI" ToRole="TBL_KITAP" />
+          <Property Name="DURUM" Type="Boolean" />
         </EntityType>
         <EntityType Name="TBL_KITAP">
           <Key>
@@ -672,6 +674,7 @@
           <EntitySetMapping Name="TBL_KATEGORI">
             <EntityTypeMapping TypeName="DB_Kutuphane_Model2.TBL_KATEGORI">
               <MappingFragment StoreEntitySet="TBL_KATEGORI">
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="AD" ColumnName="AD" />
               </MappingFragment>

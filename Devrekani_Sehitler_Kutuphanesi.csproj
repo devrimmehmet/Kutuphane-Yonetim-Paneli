@@ -450,6 +450,7 @@
     <None Include="Properties\PublishProfiles\Devrimmehmet.pubxml" />
     <None Include="Properties\PublishProfiles\dputaksi.xyz.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -591,6 +592,8 @@
     <Content Include="Views\Mesajlar\YeniMesaj.cshtml" />
     <Content Include="Views\Mesajlar\Giden.cshtml" />
     <Content Include="Views\Panelim\Kitaplarim.cshtml" />
+    <Content Include="Views\Yazarlar\YazarKitaplar.cshtml" />
+    <Content Include="Views\Uyeler\UyeKitapGecmis.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

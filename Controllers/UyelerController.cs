@@ -64,6 +64,13 @@ namespace Devrekani_Sehitler_Kutuphanesi.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult UyeKitapGecmis(int id)
+        {
+            var ktpgcms = db.TBL_HAREKET.Where(x => x.UYE == id).ToList();
+            var uyekit = db.TBL_UYELER.Where(y => y.ID == id).Select(z => z.AD + " " + z.SOYAD).FirstOrDefault();
+            ViewBag.u1 = uyekit;
+            return View(ktpgcms);
+        }
     }
 
 }

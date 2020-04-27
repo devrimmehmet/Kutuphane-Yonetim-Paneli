@@ -12,7 +12,7 @@ namespace Devrekani_Sehitler_Kutuphanesi.Controllers
         DB_Kutuphane_Entities2 db = new DB_Kutuphane_Entities2();
         public ActionResult Index()
         {
-            var degerler = db.TBL_KATEGORI.ToList();
+            var degerler = db.TBL_KATEGORI.Where(x => x.DURUM == true).ToList();
             return View(degerler);
         }
         [HttpGet]
@@ -32,7 +32,8 @@ namespace Devrekani_Sehitler_Kutuphanesi.Controllers
         public ActionResult KategoriSil(int id)
         {
             var kategori = db.TBL_KATEGORI.Find(id);
-            db.TBL_KATEGORI.Remove(kategori);
+            //db.TBL_KATEGORI.Remove(kategori);
+            kategori.DURUM = false;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

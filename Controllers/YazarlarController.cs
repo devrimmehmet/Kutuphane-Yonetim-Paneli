@@ -66,5 +66,12 @@ namespace Devrekani_Sehitler_Kutuphanesi.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult YazarKitaplar(int id)
+        {
+            var yazar = db.TBL_KITAP.Where(x => x.YAZAR == id).ToList();
+            var yzrad = db.TBL_YAZAR.Where(y => y.ID == id).Select(z => z.AD + " " + z.SOYAD).FirstOrDefault();
+            ViewBag.y1 = yzrad;
+            return View(yazar);
+        }
     }
 }

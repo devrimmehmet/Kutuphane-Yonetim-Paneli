@@ -9,18 +9,19 @@
 <form class="form-group" method="post">
 
     <div style="margin-top:15px">
-        <label>Üye ID</label>
-        @Html.TextBoxFor(k => k.UYE, new { @class = "form-control" ,@maxlength="9"})
-
+        <label>Üye</label>
+        @* @Html.TextBoxFor(k => k.UYE, new { @class = "form-control" ,@maxlength="9"}) *@
+        @Html.DropDownListFor(k => k.TBL_UYELER.ID, (List<SelectListItem>)ViewBag.dgr1, new {@class="form-control"})
     </div>
     <div style="margin-top:15px">
-        <label>Kitap ID</label>
-        @Html.TextBoxFor(k => k.KITAP, new { @class = "form-control",@maxlength="9"})
-
+        <label>Kitap</label>
+        @*@Html.TextBoxFor(k => k.KITAP, new { @class = "form-control", @maxlength = "9" })*@
+        @Html.DropDownListFor(k => k.TBL_KITAP.ID, (List<SelectListItem>)ViewBag.dgr2, new { @class = "form-control" })
     </div>
     <div style="margin-top:15px">
-        <label>Personel ID</label>
-        @Html.TextBoxFor(k => k.PERSONEL, new { @class = "form-control" ,@maxlength="2"})
+        <label>Personel</label>
+        @*@Html.TextBoxFor(k => k.PERSONEL, new { @class = "form-control" ,@maxlength="2"})*@
+        @Html.DropDownListFor(k => k.TBL_KITAP.ID, (List<SelectListItem>)ViewBag.dgr3, new { @class = "form-control" })
     </div>
     <div style="margin-top:15px">
         <label>Kitap Veriliş Tarihi</label>
