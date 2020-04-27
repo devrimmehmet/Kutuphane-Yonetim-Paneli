@@ -1,0 +1,29 @@
+﻿@model Devrekani_Sehitler_Kutuphanesi.Models.Entity.TBL_DUYURULAR
+
+@{
+    ViewBag.Title = "YeniDuyuru";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Yeni Duyuru Ekleme Sayfası</h2>
+<form class="form-group" method="post">
+
+    <div style="margin-top:15px">
+        <label>Duyuru Kategorisi</label>
+        @Html.TextBoxFor(y => y.KATEGORI, new { @class = "form-control", @maxlength = "50" })
+
+    </div>
+    <div style="margin-top:15px">
+        <label>Duyuru İçeriği</label>
+        @Html.TextAreaFor(y => y.ICERIK, new { @class = "form-control", @maxlength = "50" })
+
+    </div>
+    <div style="margin-top:15px">
+        <label>Duyuru Tarihi</label>
+        @Html.TextBoxFor(y => y.TARIH, new { @class = "form-control", @maxlength = "50" })
+
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-info" id="Btn1">Yeni Duyuru Ekle</button>
+    </div>
+</form>

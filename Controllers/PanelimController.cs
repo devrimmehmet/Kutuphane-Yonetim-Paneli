@@ -47,5 +47,13 @@ namespace Devrekani_Sehitler_Kutuphanesi.Controllers
                 return View(degerler);
             
         }
+        public ActionResult Duyurular()
+        {
+            var duyuruListesi = db.TBL_DUYURULAR.ToList(); 
+           
+
+            return View(duyuruListesi);
+
+        }
     }
 }

@@ -1,0 +1,27 @@
+﻿@using Devrekani_Sehitler_Kutuphanesi.Models.Entity;
+@model List<TBL_DUYURULAR>
+
+@{
+    ViewBag.Title = "Duyurular";
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+}
+
+
+<h2>Duyurular</h2>
+<table class="table table-bordered">
+    <tr style="background-color:rgb(252,178,22)">
+        <th>Kategori</th>
+        <th>Tarih</th>
+        <th>İçerik</th>
+    </tr>
+    @foreach (var dyr in Model)
+    {
+<tr>
+
+    <td>@dyr.KATEGORI</td>
+    <td>@Convert.ToDateTime(dyr.TARIH).ToString("dd /MM/yyyy")</td>
+    <td>@dyr.ICERIK</td>
+
+</tr>
+    }
+</table>

@@ -1,0 +1,34 @@
+﻿@model Devrekani_Sehitler_Kutuphanesi.Models.Entity.TBL_DUYURULAR
+
+@{
+    ViewBag.Title = "DuyuruDetay";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Duyuru Detayı</h2>
+
+
+@using (Html.BeginForm("DuyuruGuncelle", "Duyuru", FormMethod.Post))
+{
+    <div style="margin-bottom:15px"></div>
+    <div class="form-group">
+
+        @Html.LabelFor(k => k.ID)
+        @Html.TextBoxFor(k => k.ID, new { @class = "form-control", @readonly = "true" })
+        <br />
+        <label>Duyuru Kategorisi</label>
+        @Html.TextBoxFor(k => k.KATEGORI, new { @class = "form-control", @maxlength = "50" })
+        <br />
+        <label>Duyuru İçeriği</label>
+        @Html.TextBoxFor(k => k.ICERIK, new { @class = "form-control", @maxlength = "50" })
+        <br />
+        <label>Duyuru Tarihi</label>
+        @Html.TextBoxFor(k => k.TARIH, new { @class = "form-control", @maxlength = "50" })
+        <br />
+     
+    </div>
+    <div>
+        <button class="btn btn-warning">Duyuru Güncelle</button>
+
+    </div>
+}
