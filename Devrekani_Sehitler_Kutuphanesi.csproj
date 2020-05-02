@@ -280,7 +280,6 @@
     <Content Include="web2\images\pp01.jpg" />
     <Content Include="web2\images\settings.png" />
     <Content Include="web2\images\tick-mark.png" />
-    <Content Include="web2\index.html" />
     <Content Include="web2\js\Chart1.js" />
     <Content Include="web2\js\clndr.js" />
     <Content Include="web2\js\easyResponsiveTabs.js" />
@@ -298,7 +297,6 @@
     <Content Include="web2\Resimler\2.jpg" />
     <Content Include="web2\Resimler\3.jfif" />
     <Content Include="web2\Resimler\4.jpg" />
-    <Content Include="web2\w3layouts-License.txt" />
     <Content Include="web3\404.html" />
     <Content Include="web3\blank.html" />
     <Content Include="web3\buttons.html" />
@@ -376,15 +374,11 @@
     <Content Include="webhava\css\style.css" />
     <Content Include="webhava\images\bg.jpg" />
     <Content Include="webhava\images\img1.jpg" />
-    <Content Include="webhava\index.html" />
     <Content Include="webhava\js\jquery-2.1.4.min.js" />
     <Content Include="webhava\js\skycons.js" />
-    <Content Include="webhava\w3layouts-License.txt" />
     <Content Include="weblogin\css\fontawesome-all.css" />
     <Content Include="weblogin\css\style.css" />
     <Content Include="weblogin\images\cover4.jpg" />
-    <Content Include="weblogin\index.html" />
-    <Content Include="weblogin\w3layouts-License.txt" />
     <Content Include="weblogin\webfonts\fa-brands-400.svg" />
     <Content Include="weblogin\webfonts\fa-regular-400.svg" />
     <Content Include="weblogin\webfonts\fa-solid-900.svg" />
@@ -394,10 +388,8 @@
     <Content Include="webregister\images\bg.jpg" />
     <Content Include="webregister\index.html" />
     <Content Include="webregister\w3layouts-License.txt" />
-    <Content Include="web\.gitignore" />
     <Content Include="web\css\freelancer.css" />
     <Content Include="web\css\freelancer.min.css" />
-    <Content Include="web\gulpfile.js" />
     <Content Include="web\img\avataaars.svg" />
     <Content Include="web\img\library.jpg" />
     <Content Include="web\img\library.png" />
@@ -407,7 +399,6 @@
     <Content Include="web\img\portfolio\game.png" />
     <Content Include="web\img\portfolio\safe.png" />
     <Content Include="web\img\portfolio\submarine.png" />
-    <Content Include="web\index.html" />
     <Content Include="web\js\contact_me.js" />
     <Content Include="web\js\contact_me.min.js" />
     <Content Include="web\js\freelancer.js" />
@@ -500,12 +491,6 @@
     <Content Include="Views\Emanetler\Index.cshtml" />
     <Content Include="Views\Emanetler\Odunciade.cshtml" />
     <Content Include="Views\Hareketler\Index.cshtml" />
-    <Content Include="web\.browserslistrc" />
-    <Content Include="web\.travis.yml" />
-    <Content Include="web\LICENSE" />
-    <Content Include="web\package-lock.json" />
-    <Content Include="web\package.json" />
-    <Content Include="web\README.md" />
     <Content Include="web\scss\base\_page.scss" />
     <Content Include="web\scss\base\_variables.scss" />
     <Content Include="web\scss\components\_buttons.scss" />

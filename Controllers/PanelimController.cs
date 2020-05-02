@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Devrekani_Sehitler_Kutuphanesi.Models.Entity;
-
+using System.Web.Security;
 
 
 namespace Devrekani_Sehitler_Kutuphanesi.Controllers
@@ -53,6 +53,14 @@ namespace Devrekani_Sehitler_Kutuphanesi.Controllers
            
 
             return View(duyuruListesi);
+
+        }
+        public ActionResult CikisYap()
+        {
+            FormsAuthentication.SignOut();
+
+
+            return RedirectToAction("GirisYap", "uye");
 
         }
     }

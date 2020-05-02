@@ -21,7 +21,7 @@
     <td>@x.GONDEREN</td>
     <td>@x.KONU</td>
     <td>@x.ICERIK</td>
-    <td>@x.TARIH</td>
+    <td>@Convert.ToDateTime(x.TARIH).ToString("dd /MM/yyyy")</td>
 </tr>
     }
 

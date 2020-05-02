@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
+    string renk = "";
 }
 
 <h2>Duyurular</h2>
@@ -12,20 +13,37 @@
         <th>Kategori</th>
         <th>Tarih</th>
         <th>Sil</th>
-       
+
         <th>Detaylar</th>
     </tr>
     @foreach (var dyr in Model)
     {
-<tr>
-    <td>@dyr.ID</td>
-    <td>@dyr.KATEGORI</td>
-    <td>@Convert.ToDateTime(dyr.TARIH).ToString("dd/MM/yyyy")</td>
-    <td>@Html.ActionLink("Sil", "DuyuruSil", new { id = dyr.ID }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek İstiyor Musunuz ?')" }) </td>
-    @*<td><a href="/Category/KategoriSil/@ktg.ID" class="btn btn-danger">Sil</a></td>  ESKİ USÜL hrefle yapma  *@
-  
-    <td><a href="/Duyuru/DuyuruDetay/@dyr.ID" class="btn btn-success" style="background-color:brown">Detaylar</a></td>
-</tr>
+        if (dyr.KATEGORI == "İletişim")
+        {
+            renk = "bg-warning text-black";
+        }
+        if (dyr.KATEGORI == "Kitapları Geciktirmeyin")
+        {
+            renk = "bg-danger text-white";
+        }
+        if (dyr.KATEGORI == "Yeni Kitap")
+        {
+            renk = "bg-success text-white";
+        }
+        if (dyr.KATEGORI == "Diğer")
+        {
+            renk = "bg-info text-white";
+        }
+       
+        <tr class="@renk">
+            <td>@dyr.ID</td>
+            <td>@dyr.KATEGORI</td>
+            <td>@Convert.ToDateTime(dyr.TARIH).ToString("dd/MM/yyyy")</td>
+            <td>@Html.ActionLink("Sil", "DuyuruSil", new { id = dyr.ID }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek İstiyor Musunuz ?')" }) </td>
+            @*<td><a href="/Category/KategoriSil/@ktg.ID" class="btn btn-danger">Sil</a></td>  ESKİ USÜL hrefle yapma  *@
+
+            <td><a href="/Duyuru/DuyuruDetay/@dyr.ID" class="btn btn-success" style="background-color:brown">Detaylar</a></td>
+        </tr>
     }
 </table>
 <a href="/Duyuru/YeniDuyuru" class="btn btn-primary">Yeni Duyuru Ekle</a>

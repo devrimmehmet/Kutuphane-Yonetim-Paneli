@@ -252,7 +252,7 @@
                 @foreach (var x in Model.Deger1)
                 {
 
-
+                    if (x.KITAPRESIM != null) { 
                     <div class="col-md-6 col-lg-4">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
@@ -261,11 +261,12 @@
                                 </div>
                             </div>
                             <img class="img-fluid" src="@x.KITAPRESIM" alt="" width="300" height="100">
-
+                            <br /><br />
                         </div>
                     </div>
                     <div> <br /><hr /><br /></div>
                     <div> <br /><hr /><br /></div>
+                    }
                 }
 
 
