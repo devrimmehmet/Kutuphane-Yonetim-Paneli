@@ -1,5 +1,5 @@
-# Proje 3 yıl aradan sonra tekrar etme ve Mvc çalışmak maksadıyla tekrardan hazırlanıyor ve güncelleniyor. 26.11.2022
-https://github.com/devrimmehmet/Kutuphane-Yonetim-Paneli/tree/master/MvcKutuphane
+# Proje 3 yıl aradan sonra revize ediliyor. (26.11.2022)
+[Revize Edilmiş Hali İçin Tıklayın](https://github.com/devrimmehmet/Kutuphane-Yonetim-Paneli/tree/master/MvcKutuphane)
 
 # Kütüphane Yönetim Sistemi 
 Murat Yücedağ'ın Mvc5 ile 3 Panelli Kütüphane Yönetim Sistemi Eğitimini temel alarak kodlanmıştır.
@@ -11,6 +11,8 @@ Proje GPL v3 lisansı ile lisanslanmış olup, açık kaynak kodludur. Lisans ha
 
 ############################################################################
 ############################################################################
+# The project is being revised after 3 years. (26.11.2022)
+[Click for Revised Version](https://github.com/devrimmehmet/Kutuphane-Yonetim-Paneli/tree/master/MvcKutuphane)
 
 # Library Management System
 It was coded on the basis of Murat Yücedağ's 3 Panel Library Management System Training with Mvc5.
