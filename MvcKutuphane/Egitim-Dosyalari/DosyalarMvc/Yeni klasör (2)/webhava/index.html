@@ -1,0 +1,114 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flatty Weather Report Responsive Widget Template :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Flatty Weather Report template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" /> 
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<!-- //web font -->
+<!-- js -->   
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/skycons.js"></script> <!-- skycons-icons --> 	
+<!-- //js -->  
+</head>
+<body>
+	<!-- w3ls-weather -->
+	<div class="w3ls-weather">
+		<h1>Flatty Weather Report</h1>
+		<div class="w3ls-weather-agileinfo"> 
+			<div class="weather-left">
+				<div class="weather-left-text">
+					<h4>Los Angeles, USA </h4>
+					<h5>Sunday, 12th March </h5>
+				</div>
+				<ul class="report">
+					<li><a href="#">25 °C</a></li>
+					<li><a href="#"><span>79</span> °F</a></li>
+				</ul>
+			</div>
+			<div class="weather-right">
+				<ul>
+					<li>
+						<figure class="icons">
+							<canvas id="partly-cloudy-day" width="60" height="60"></canvas>
+						</figure>
+						<h3>25 °C</h3>
+						<div class="clear"></div>
+					</li>
+					<li>
+						<figure class="icons">
+							<canvas id="clear-day" width="40" height="40"></canvas>
+						</figure>
+						<div class="weather-text">
+							<h4>WED</h4>
+							<h5>27 °C</h5>
+						</div>
+						<div class="clear"></div>
+					</li>
+					<li>
+						<figure class="icons">
+							<canvas id="snow" width="40" height="40"></canvas>
+						</figure>
+						<div class="weather-text">
+							<h4>THR</h4>
+							<h5>13 °C</h5>
+						</div>
+						<div class="clear"></div>
+					</li>
+					<li>
+						<figure class="icons">
+							<canvas id="partly-cloudy-night" width="40" height="40"></canvas>
+						</figure>
+						<div class="weather-text">
+							<h4>FRI</h4>
+							<h5>18 °C</h5>
+						</div>
+						<div class="clear"></div>
+					</li>
+				</ul>
+				<script>
+					 var icons = new Skycons({"color": "#fff"}),
+						  list  = [
+							"partly-cloudy-day"
+						  ],
+						  i;
+
+					  for(i = list.length; i--; )
+						icons.set(list[i], list[i]);
+					  icons.play();
+				</script>
+				<script>
+					 var icons = new Skycons({"color": "#fff"}),
+						  list  = [
+							"clear-night","partly-cloudy-night", "cloudy", "clear-day", "sleet", "snow", "wind","fog"
+						  ],
+						  i;
+
+					  for(i = list.length; i--; )
+						icons.set(list[i], list[i]);
+					  icons.play();
+				</script>
+			</div>
+			<div class="clear"></div>
+		</div>  
+	</div>	
+	<!-- //w3ls-weather --> 
+	<!-- copyright -->
+	<div class="copyw3-agile">
+		<p> © 2017 Flatty Weather Report . All rights reserved | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts.</a></p>
+	</div>
+	<!-- //copyright -->
+</body>
+</html>
