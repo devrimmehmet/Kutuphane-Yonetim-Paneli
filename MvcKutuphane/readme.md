@@ -3,3 +3,5 @@
 Veri tabanı oluşturuldu.
 
 Proje Taslağı Oluşturuldu.
+
+Kategori Sayfası Yazıldı, Ekle Sil Güncelle Komutları eklendi.
