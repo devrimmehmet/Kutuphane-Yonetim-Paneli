@@ -1,0 +1,103 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Başlık</title>
+
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+        <style>
+            body {
+                font-family: "Lato", sans-serif;
+            }
+
+            .sidebar {
+                height: 100%;
+                width: 240px;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #111;
+                overflow-x: hidden;
+                padding-top: 16px;
+            }
+
+                .sidebar a {
+                    padding: 6px 8px 6px 16px;
+                    text-decoration: none;
+                    font-size: 20px;
+                    color: #818181;
+                    display: block;
+                }
+
+                    .sidebar a:hover {
+                        color: #0094ff;
+                    }
+
+            .main {
+                margin-left: 240px; /* Same as the width of the sidenav */
+                padding: 0px 10px;
+            }
+
+            @@media screen and (max-height: 450px) {
+                .sidebar {
+                    padding-top: 15px;
+                }
+
+                    .sidebar a {
+                        font-size: 18px;
+                    }
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="sidebar">
+            <a href="#"><i class="glyphicon glyphicon-home"></i> &nbsp; Ana Sayfa</a>
+            <a href="/Category/Index/"><i class="glyphicon glyphicon-list"></i> &nbsp; Kategoriler</a>
+            <a href="/Book/Index/"><i class="glyphicon glyphicon-book"></i> &nbsp; Kitaplar</a>
+            <a href="/Author/Index/"><i class="glyphicon glyphicon-pencil"></i> &nbsp; Yazarlar</a>
+            <a href="#"><i class="glyphicon glyphicon-user"></i> &nbsp; Kullanıcılar</a>
+            <a href="#"><i class="glyphicon glyphicon-tower"></i> &nbsp; Personeller</a>
+            <a href="#"><i class="glyphicon glyphicon-circle-arrow-right"></i> &nbsp; Ödünç Kitap Ver</a>
+            <a href="#"><i class="glyphicon glyphicon-circle-arrow-left"></i> &nbsp; Ödünç Kitap Al</a>
+            <a href="#"><i class="glyphicon glyphicon-euro"></i> &nbsp; Kasa</a>
+            <a href="#"><i class="glyphicon glyphicon-dashboard"></i> &nbsp; İşlemler</a>
+            <a href="#"><i class="glyphicon glyphicon-cog"></i> &nbsp; Ayarlar</a>
+            <a href="#"><i class="glyphicon glyphicon-phone"></i> &nbsp; Yardım</a>
+            <a href="#"><i class="glyphicon glyphicon-remove-sign"></i> &nbsp; Çıkış</a>
+
+
+
+
+        </div>
+
+        <div class="main">
+            @RenderBody()
+        </div>
+
+    </body>
+    </html>
+
+
+<div>
+
+</div>
+</body>
+</html>

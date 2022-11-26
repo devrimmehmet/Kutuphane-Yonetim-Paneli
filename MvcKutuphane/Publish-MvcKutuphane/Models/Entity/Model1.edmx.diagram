@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e8a1f36ae6c5424ebe762423595a8a88" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="LibraryModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Authors" Width="1.5" PointX="1.5" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Books" Width="1.5" PointX="3.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.CashDesk" Width="1.5" PointX="7.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Categories" Width="1.5" PointX="1.5" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Employees" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Members" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Penalties" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Transactions" Width="1.5" PointX="6" PointY="3.5" IsExpanded="true" />
+        <AssociationConnector Association="LibraryModel.FK_Books_Authors" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_Books_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_Transactions_Books" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_Transactions_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_Penalties_Members" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_Transactions_Members" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_Penalties_Transactions" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
