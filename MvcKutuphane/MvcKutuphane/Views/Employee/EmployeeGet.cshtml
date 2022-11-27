@@ -1,0 +1,26 @@
+﻿@model MvcKutuphane.Models.Entity.Employees
+
+@{
+    ViewBag.Title = "EmployeeGet";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Personel Güncelleme Sayfası</h2>
+
+@using (Html.BeginForm("EmployeeUpdate", "Employee", FormMethod.Post))
+{
+    <div style="margin-bottom:15px"></div>
+    <div class="form-group">
+
+        @Html.LabelFor(k => k.Id)
+        @Html.TextBoxFor(k => k.Id, new { @class = "form-control", @readonly = "true" })
+        <br />
+        <label>Personel Adı-Soyadı</label>
+        @Html.TextBoxFor(k => k.Employee, new { @class = "form-control", @maxlength = "50" })
+      
+    </div>
+   
+        <button class="btn btn-warning">Personel Güncelle</button>
+
+
+}

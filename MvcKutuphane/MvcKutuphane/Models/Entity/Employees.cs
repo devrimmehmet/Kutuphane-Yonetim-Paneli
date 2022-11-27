@@ -11,7 +11,8 @@ namespace MvcKutuphane.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Employees
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,6 +22,8 @@ namespace MvcKutuphane.Models.Entity
         }
     
         public byte Id { get; set; }
+        [Required(ErrorMessage ="Personel Adý Boþ Geçilemez")]
+        [MaxLength(50)]
         public string Employee { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
