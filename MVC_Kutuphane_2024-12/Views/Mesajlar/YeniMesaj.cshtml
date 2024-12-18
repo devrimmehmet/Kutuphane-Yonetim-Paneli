@@ -1,0 +1,27 @@
+﻿@model Devrekani_Sehitler_Kutuphanesi.Models.Entity.TBL_MESAJLAR
+@{
+    ViewBag.Title = "YeniMesaj";
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+}
+    <form class="form-group" method="post">
+        <h2>Yeni Mesaj Gönder</h2>
+        <div></div>
+        <div style="margin-top:15px">
+
+            <label>Alıcı Mail</label>
+            @Html.TextBoxFor(x => x.ALICI, new { @class = "form-control" })
+        </div>
+        <div style="margin-top:15px">
+
+            <label>Konu</label>
+            @Html.TextBoxFor(x => x.KONU, new { @class = "form-control" })
+        </div>
+        <div style="margin-top:15px">
+
+            <label>İçerik</label>
+            @Html.TextAreaFor(x => x.ICERIK, new { @class = "form-control" })
+        </div>
+        <div style="margin-top:15px">
+            <button class="btn btn-info" id="Btn1">Gönder</button>
+        </div>
+    </form>

@@ -1,0 +1,81 @@
+﻿ @model Devrekani_Sehitler_Kutuphanesi.Models.Entity.TBL_UYELER
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+}
+
+<h2>Öğrenci Paneli</h2>
+
+@using (Html.BeginForm("Index2", "Panelim", FormMethod.Post))
+{
+<table class="table table-hover" style="margin-top:30px">
+    <tr>
+        <td>
+            <label style="font-weight:bolder">Mail Adresi : </label> @HttpContext.Current.User.Identity.Name
+        </td>
+    </tr>
+    @*<tr>
+            <td>
+           //     <label style="font-weight:bolder">ID : </label> @TempData["id"].ToString()
+                @Html.LabelFor(x => x.ID)
+                @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+
+            </td>
+        </tr>*@
+    <tr>
+        @*<td>Ad :</td>*@
+        <td>
+            <label style="font-weight:bolder">Ad :</label>
+            @*  @Html.LabelFor(x => x.AD)*@
+           @Html.TextBoxFor(x => x.AD, new { @class = "form-control" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label style="font-weight:bolder">Soyad : </label> 
+            @* @Html.LabelFor(x => x.SOYAD)*@
+            @Html.TextBoxFor(x => x.SOYAD, new { @class = "form-control" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label style="font-weight:bolder">Kullanıcı Adı : </label>
+            @* @Html.LabelFor(x => x.ID)*@
+            @Html.TextBoxFor(x => x.KULLANICIADI, new { @class = "form-control" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label style="font-weight:bolder">Şifre :</label> 
+            @*  @Html.LabelFor(x => x.ID)*@
+            @Html.TextBoxFor(x => x.SIFRE, new { @class = "form-control" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label style="font-weight:bolder">Fotoğraf Linki :</label>
+            @*   @Html.LabelFor(x => x.ID)*@
+            @Html.TextBoxFor(x => x.FOTOGRAF, new { @class = "form-control" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label style="font-weight:bolder">Okul :</label>
+            @*   @Html.LabelFor(x => x.ID)*@
+            @Html.TextBoxFor(x => x.OKUL, new { @class = "form-control" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label style="font-weight:bolder">Telefon :</label>
+            @*   @Html.LabelFor(x => x.ID)*@
+            @Html.TextBoxFor(x => x.TELEFON, new { @class = "form-control" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button class="btn btn-warning">Bilgileri Güncelle</button>
+        </td>
+    </tr>
+</table>}
+

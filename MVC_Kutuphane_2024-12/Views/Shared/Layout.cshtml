@@ -1,0 +1,84 @@
+﻿
+@{
+    Layout = null;
+}
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+body {font-family: "Lato", sans-serif;}
+
+.sidebar {
+  height: 100%;
+  width: 150px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #818181;
+  display: block;
+}
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+.main {
+  margin-left: 150px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+@@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <a href="#"><i class="glyphicon glyphicon-home"></i> &nbsp; Anasayfa </a>
+        <a href="/Kategoriler/Index/"><i class="glyphicon glyphicon-list"></i> &nbsp; Kategoriler </a>
+        <a href="/Yazarlar/Index/"><i class="glyphicon glyphicon-pencil"></i> &nbsp; Yazarlar </a>
+        <a href="/Kitaplar/Index/"><i class="glyphicon glyphicon-book"></i> &nbsp; Kitaplar </a>
+        <a href="/Uyeler/Index/"><i class="glyphicon glyphicon-user"></i> &nbsp; Üyeler </a>
+        <a href="/Personeller/Index/"><i class="glyphicon glyphicon-tower"></i> &nbsp; Personeller </a>
+        <a href="/Emanetler/OduncVer/"><i class="glyphicon glyphicon-circle-arrow-right"></i> &nbsp;Emanet Ver </a>
+        <a href="/Emanetler/Index/"><i class="glyphicon glyphicon-circle-arrow-left"></i> &nbsp;Emanet Al </a>
+        <a href="/Istatistikler/Index/"><i class="glyphicon glyphicon-sort"></i> &nbsp; İstatistikler </a>
+        <a href="/Duyuru/Index/"><i class="glyphicon glyphicon-earphone"></i> &nbsp; Duyurular </a>
+        <a href="/Hareketler/Index/"><i class="glyphicon glyphicon-dashboard"></i> &nbsp;Hareketler</a>
+        <a href="/Istatistikler/Hava/"><i class="glyphicon glyphicon-cloud"></i> &nbsp;Hava Durumu </a>
+        <a href="/Istatistikler/HavaDurumu/"><i class="glyphicon glyphicon-cloud"></i> &nbsp;Hava Durumu </a>
+        <a href="/Istatistikler/Galeri/"><i class="glyphicon glyphicon-picture"></i> &nbsp; Galeri </a>
+        <a href="/Istatistikler/Kartlar/"><i class="glyphicon glyphicon-bookmark"></i> &nbsp; Kartlar </a>
+        <a href="/Anasayfa/Index"><i class="glyphicon glyphicon-gift"></i> &nbsp; Vitrin </a>
+        <a href="#"><i class="glyphicon glyphicon-cog"></i> &nbsp; Ayarlar </a>
+        <a href="/Yardim/Index/"><i class="glyphicon glyphicon-phone"></i> &nbsp; Yardım </a>
+        <a href="/Panelim/CikisYap/"><i class="glyphicon glyphicon-remove-sign"></i> &nbsp; Çıkış </a>
+
+        @*LAZIM OLURSA DİYE fa sisteminde iconlar felan
+        <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
+         <a href="#services"><i class="fa fa-fw fa-wrench"></i> Services</a>
+         <a href="#clients"><i class="fa fa-fw fa-user"></i> Clients</a>
+         <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>*@
+    </div>
+
+    <div class="main">
+       @RenderBody()
+    </div>
+
+</body>
+</html>

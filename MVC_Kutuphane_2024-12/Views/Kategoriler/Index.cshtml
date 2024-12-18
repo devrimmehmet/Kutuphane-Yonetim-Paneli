@@ -1,0 +1,28 @@
+﻿@using Devrekani_Sehitler_Kutuphanesi.Models.Entity
+@model List<TBL_KATEGORI>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<h2>Kategoriler</h2>
+<table class="table table-bordered">
+    <tr style="background-color:rgb(252,178,22)">
+        <th>KATEGORI ID</th>
+        <th>KATEGORI ADI</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    @foreach (var ktg in Model)
+    {  
+<tr>
+    <td>@ktg.ID</td>
+    <td>@ktg.AD</td>
+    <td>@Html.ActionLink("Sil", "KategoriSil", new { id = ktg.ID }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek İstiyor Musunuz ?')" }) </td>
+    @*<td><a href="/Kategoriler/KategoriSil/@ktg.ID" class="btn btn-danger">Sil</a></td>  ESKİ USÜL hrefle yapma  *@
+    <td><a href="/Kategoriler/KategoriGetir/@ktg.ID" class="btn btn-success">Güncelle</a></td>
+</tr>
+    }
+</table>
+<a href="/Kategoriler/KategoriEkle" class="btn btn-primary">Yeni Kategori Ekle</a>

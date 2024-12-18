@@ -1,0 +1,29 @@
+﻿@using Devrekani_Sehitler_Kutuphanesi.Models.Entity
+@model List<TBL_MESAJLAR>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+}
+
+<h2>Gelen Mesajlar</h2>
+
+<table class="table table-bordered">
+    <br />
+    <tr>
+        <th>Gönderen</th>
+        <th>Konu</th>
+        <th>Mesaj</th>
+        <th>Tarihi</th>
+    </tr>
+    @foreach(var x in Model)
+    {
+<tr>
+    <td>@x.GONDEREN</td>
+    <td>@x.KONU</td>
+    <td>@x.ICERIK</td>
+    <td>@Convert.ToDateTime(x.TARIH).ToString("dd /MM/yyyy")</td>
+</tr>
+    }
+
+
+</table>

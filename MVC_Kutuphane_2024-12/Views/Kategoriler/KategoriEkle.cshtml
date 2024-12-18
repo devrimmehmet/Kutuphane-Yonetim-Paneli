@@ -1,0 +1,19 @@
+﻿@model Devrekani_Sehitler_Kutuphanesi.Models.Entity.TBL_KATEGORI
+
+@{
+    ViewBag.Title = "KategoriEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Kategori Ekleme Sayfası</h2>
+<form class="form-group" method="post">
+
+    <div style="margin-top:15px">
+        <label>Yeni Kategori Adı</label>
+        @Html.TextBoxFor(y => y.AD, new { @class = "form-control",@maxlength="20" })
+        @*<input type="text" class="form-control" name="AD" />  ESKİ BİR YÖNTEMLE VERİ ÇEKME      *@
+    </div>
+    <div style="margin-top:15px">
+       <button class="btn btn-info" id="Btn1">Kategori Ekle</button>
+    </div>
+</form>

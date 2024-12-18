@@ -1,0 +1,28 @@
+﻿@using Devrekani_Sehitler_Kutuphanesi.Models.Entity
+@model List<TBL_HAREKET>
+@{
+    ViewBag.Title = "Kitaplarim";
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+}
+
+<h2>Kitap Geçmişim</h2>
+
+<table class="table table-bordered">
+    <tr style="background-color:rgb(252,178,22)">
+
+        <th>Kitap Adı</th>
+        <th>Kitabın Veriliş Tarihi</th>
+        <th>Beklenen İade Tarihi</th>
+    </tr>
+    @foreach (var k in Model)
+        {
+            <tr>
+                <td>@k.TBL_KITAP.AD</td>
+                <td>@Convert.ToDateTime(k.ALISTARIHI).ToString("dd/MM/yyyy")</td>
+                <td>@Convert.ToDateTime(k.IADETARIHI).ToString("dd/MM/yyyy")</td>
+                
+            </tr>
+        }
+
+
+</table>

@@ -1,0 +1,33 @@
+﻿@model Devrekani_Sehitler_Kutuphanesi.Models.Entity.TBL_YAZAR
+@{
+    ViewBag.Title = "YazarGetir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Yazar Bilgilerini Güncelleme Sayfası</h2>
+
+@using (Html.BeginForm("YazarGuncelle", "Yazarlar", FormMethod.Post))
+{
+    <div style="margin-bottom:15px"></div>
+    <div class="form-group">
+        <div style="margin-bottom:15px">
+            <label>ID</label>
+            @Html.TextBoxFor(y => y.ID, new { @class = "form-control",@readonly=true })
+        </div>
+        <div style="margin-bottom:15px">
+            <label>Adı</label>
+            @Html.TextBoxFor(y => y.AD, new { @class = "form-control", @maxlength = "30" })
+            @Html.ValidationMessageFor(y => y.AD, "", new { @style = "color:red" })
+        </div>
+        <div style="margin-bottom:15px">
+            <label>Soyadı</label>
+            @Html.TextBoxFor(y => y.SOYAD, new { @class = "form-control", @maxlength = "30" })
+            @Html.ValidationMessageFor(y => y.SOYAD, "", new { @style = "color:red" })
+        </div>
+        <div style="margin-bottom:15px">
+            <label>Hakkında</label>
+            @Html.TextAreaFor(y => y.DETAY, new { @class = "form-control",@maxlength="1000" })
+        </div>
+        <button class="btn btn-warning">Yazar Bilgilerini Güncelle</button>
+    </div>
+}
